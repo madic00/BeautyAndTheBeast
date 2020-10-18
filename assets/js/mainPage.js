@@ -18,6 +18,8 @@ $(document).ready(function () {
 
             localStorage.setItem('videoShow', time);
 
+            $('.preloader audio').removeAttr('muted');
+
         }
 
         else {

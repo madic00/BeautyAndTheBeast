@@ -252,8 +252,8 @@ html body main .fader .infoMain .infoBlock a {
   font-size: 1.1em;
   letter-spacing: 2px;
   opacity: 0;
-  -webkit-animation: showMe 2.6s;
-          animation: showMe 2.6s;
+  -webkit-animation: showMe 2.2s;
+          animation: showMe 2.2s;
   -webkit-animation-delay: 6s;
           animation-delay: 6s;
   -webkit-animation-fill-mode: forwards;
