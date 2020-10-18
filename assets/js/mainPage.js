@@ -26,7 +26,7 @@ $(document).ready(function () {
 
             console.log(time - getTimeFromLocal, time, getTimeFromLocal)
 
-            if (time - getTimeFromLocal >= 0) {
+            if (time - getTimeFromLocal >= 5) {
 
                 setTimeout(function (e) {
 
