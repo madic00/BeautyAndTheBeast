@@ -40,7 +40,13 @@
 
     <div class="preload">
 
-        <video autoplay preload="auto" src="assets/videos/preloadVideo.mp4"></video>
+        <video autoplay muted onloadedmetadata="this.muted = true">
+
+            <source src="assets/videos/preloadVideo.mp4" type="video/mp4" />
+            <source src="assets/videos/preloadVideo.ogg" type="video/ogg" />
+            <source src="assets/videos/preloadVideo.webm" type="video/webm" />
+
+        </video>
 
     </div>
 
