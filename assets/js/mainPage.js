@@ -10,14 +10,13 @@ $(document).ready(function () {
 
             $('body').css('overflow-y', "auto");
 
-            $('.preload').fadeOut();
+            $('.preloader').fadeOut();
 
             $('.infoBlock img').css("animation-delay", "1s");
 
             $('.infoBlock a').css("animation-delay", "2s");
 
             localStorage.setItem('videoShow', time);
-
 
         }
 
@@ -35,7 +34,7 @@ $(document).ready(function () {
 
                     $('.infoBlock a').css("animation-delay", "6s");
 
-                    $('.preload').fadeOut();
+                    $('.preloader').fadeOut();
 
                     $('body').addClass('vert');
 
@@ -49,7 +48,7 @@ $(document).ready(function () {
 
                 $('body').css('overflow-y', "auto");
 
-                $('.preload').fadeOut();
+                $('.preloader').fadeOut();
 
                 $('.infoBlock img').css("animation-delay", "1s");
 

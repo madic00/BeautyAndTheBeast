@@ -12,7 +12,6 @@ html body {
   width: 100%;
   background-color: #141414;
   overflow: hidden;
-  height: 2000px !important;
 }
 
 html body .ytButton {
@@ -35,7 +34,7 @@ html body .ytButton i:hover {
   color: #ff3814;
 }
 
-html body .preload {
+html body .preloader {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -49,11 +48,13 @@ html body .preload {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: #151315;
 }
 
-html body .preload video {
-  -o-object-fit: fill;
-     object-fit: fill;
+html body .preloader video {
+  width: 100%;
 }
 
 html body nav {

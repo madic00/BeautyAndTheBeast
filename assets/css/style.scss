@@ -23,7 +23,6 @@ html{
         width : 100%;
         background-color: #141414;
         overflow: hidden;
-        height: 2000px !important;
 
         // Youtube button
 
@@ -51,9 +50,9 @@ html{
 
         }
 
-        // Preload
+        // Preloader
 
-        .preload{
+        .preloader{
 
             width: 100%;
             height: 100vh;
@@ -62,10 +61,13 @@ html{
             display: $f;
             justify-content: $c;
             align-items: $c;
+            display: $f;
+            justify-content: $c;
+            background-color: #151315;
 
             video{
 
-                object-fit: fill;
+                width : 100%;
 
             }
 
