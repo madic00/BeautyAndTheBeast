@@ -1,0 +1,314 @@
+*{
+
+    padding: 0px;
+    margin : 0px;
+
+}
+
+$f : flex;
+$sa : space-around;
+$sb : space-between;
+$c : center;
+$co : column;
+$fw : wrap;
+$font : 'Work Sans', sans-serif;
+
+html{
+
+    scroll-behavior: smooth;
+    width : 100%;
+
+    body{
+
+        width : 100%;
+        background-color: #141414;
+        overflow: hidden;
+        height: 2000px !important;
+
+        // Youtube button
+
+        .ytButton{
+
+            position: fixed;
+            right : 2%;
+            top: 6.5%;
+            z-index: 1000;
+            transition: .6s;
+
+            i{
+
+                font-size: 2.4em;
+                color : tomato;
+                transition: .5s;
+
+                &:hover{
+
+                    color : darken(tomato, 10%);
+
+                }
+
+            }
+
+        }
+
+        // Preload
+
+        .preload{
+
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            z-index: 1001;
+            display: $f;
+            justify-content: $c;
+            align-items: $c;
+
+            video{
+
+                object-fit: fill;
+
+            }
+
+        }
+
+    // Navigacija
+
+        nav{
+
+            width : 100%;
+            position: fixed;
+            top: 0px;
+            display: $f;
+            justify-content: $sa;
+            align-items: $c;
+            background-color: transparent;
+            z-index: 999;
+            padding : 0.5% 0%;
+            transition : .6s;
+
+            .logoNav{
+
+                width : 25%;
+                display: $f;
+                justify-content: flex-start;
+                align-items: $c;
+
+                .logoImage{
+
+                    img{
+
+                        width : 150px;
+                        max-width: 100%;
+                        height: auto;
+                        transition: .6s;
+                
+                    }
+
+                }
+
+            }
+
+            .menuNav{
+
+                width : 55%;
+
+                .menu{
+
+                    display: $f;
+                    align-items: $c;
+                    margin : 0px;
+                    list-style-type: none;
+                    justify-content: $sa;
+
+                    li{
+
+                        a{
+
+                            color : whitesmoke;
+                            text-decoration: none;
+                            font-size: 1.2em;
+                            position: relative;
+                            transition: .6s;
+                            letter-spacing: 2.5px;
+                            font-family: $font;
+
+                            &:hover{
+                                color: tomato;
+                            }
+
+                            &:before,&:after{
+                                height: 14px;
+                                width: 14px;
+                                position: absolute;
+                                content: '';
+                                transition: all 0.35s ease;
+                                opacity: 0;
+                            }
+        
+                            &:before{
+                                left: -15%;
+                                top: -15%;
+                                border-left: 3px solid tomato;
+                                border-top: 3px solid tomato;
+                                transform: translate(100%, 50%);
+                            }
+        
+                            &:after{
+                                right: -15%;
+                                bottom: -15%;
+                                border-right: 3px solid tomato;
+                                border-bottom: 3px solid tomato;
+                                transform: translate(-100%, -50%);
+                            }
+        
+                            &:hover:before,&:hover:after{
+                                transform: translate(0%, 0%);
+                                opacity: 1;
+                            }
+        
+                            &:hover{
+                                color: lighten(tomato,5%);
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        // Main
+
+        main{
+
+            width : 100%;
+            height: 100vh;
+            padding : 0px;
+            background-image: url('../images/backgroundNew.jpg');
+            background-repeat: no-repeat;
+            background-position: $c;
+            background-attachment: fixed;
+            background-size: cover;
+
+            .fader{
+
+                width : 100%;
+                height : 100%;
+                display: $f;
+                align-items: $c;
+                background-color: cyan;
+                justify-content: flex-start;
+                background-color: rgba(0, 0, 0, 0.7);
+
+                .infoMain{
+
+                    width : 100%;
+                    display: $f;
+                    flex-direction: $co;
+                    align-items: flex-start;
+                    justify-content: $c;
+                    text-align: $c;
+
+                    .infoBlock{
+
+                        display: $f;
+                        flex-direction: $co;
+                        justify-content: $c;
+                        align-items: $c;
+
+                        img{
+
+                            width : 60%;
+                            opacity: 0;
+                            animation:showMe 2.6s;
+                            animation-delay:5s;
+                            animation-fill-mode: forwards;
+
+                        }
+
+                        a{
+
+                            transition: 0.5s;
+                            border-radius: 12px;
+                            text-decoration: none;
+                            padding : 5%;
+                            margin-top: 7%;
+                            font-family: $font;
+                            background-color: tomato;
+                            color : whitesmoke;
+                            font-size : 1.1em;
+                            letter-spacing: 2px;
+                            opacity: 0;
+                            animation:showMe 2.6s;
+                            animation-delay:6s;
+                            animation-fill-mode: forwards;
+
+
+                            &:hover,
+                            &:focus { 
+                                    border-color: transparent;
+                                    color: tomato;
+                                    box-shadow: inset 0 -4.50em 0 0 whitesmoke;
+                            } 
+
+                        }
+
+                    }
+    
+                }
+
+            }
+
+        }
+
+    }
+
+    .vert{
+
+        overflow-y: auto;
+
+    }
+
+}
+
+
+// Animacije
+
+@keyframes showMe{
+
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+
+}
+
+// Skroler
+
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #141414;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: tomato;
+    border-radius: 6px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: lighten(tomato, 5%);
+  }

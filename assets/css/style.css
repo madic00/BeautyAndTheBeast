@@ -1,0 +1,312 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+html body {
+  width: 100%;
+  background-color: #141414;
+  overflow: hidden;
+  height: 2000px !important;
+}
+
+html body .ytButton {
+  position: fixed;
+  right: 2%;
+  top: 6.5%;
+  z-index: 1000;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+html body .ytButton i {
+  font-size: 2.4em;
+  color: tomato;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+html body .ytButton i:hover {
+  color: #ff3814;
+}
+
+html body .preload {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1001;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body .preload video {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+html body nav {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  z-index: 999;
+  padding: 0.5% 0%;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+html body nav .logoNav {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body nav .logoNav .logoImage img {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+html body nav .menuNav {
+  width: 55%;
+}
+
+html body nav .menuNav .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px;
+  list-style-type: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+html body nav .menuNav .menu li a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 1.2em;
+  position: relative;
+  -webkit-transition: .6s;
+  transition: .6s;
+  letter-spacing: 2.5px;
+  font-family: "Work Sans", sans-serif;
+}
+
+html body nav .menuNav .menu li a:hover {
+  color: tomato;
+}
+
+html body nav .menuNav .menu li a:before, html body nav .menuNav .menu li a:after {
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  content: '';
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+
+html body nav .menuNav .menu li a:before {
+  left: -15%;
+  top: -15%;
+  border-left: 3px solid tomato;
+  border-top: 3px solid tomato;
+  -webkit-transform: translate(100%, 50%);
+          transform: translate(100%, 50%);
+}
+
+html body nav .menuNav .menu li a:after {
+  right: -15%;
+  bottom: -15%;
+  border-right: 3px solid tomato;
+  border-bottom: 3px solid tomato;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+}
+
+html body nav .menuNav .menu li a:hover:before, html body nav .menuNav .menu li a:hover:after {
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+  opacity: 1;
+}
+
+html body nav .menuNav .menu li a:hover {
+  color: #ff7961;
+}
+
+html body main {
+  width: 100%;
+  height: 100vh;
+  padding: 0px;
+  background-image: url("../images/backgroundNew.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+html body main .fader {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: cyan;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+html body main .fader .infoMain {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+html body main .fader .infoMain .infoBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body main .fader .infoMain .infoBlock img {
+  width: 60%;
+  opacity: 0;
+  -webkit-animation: showMe 2.6s;
+          animation: showMe 2.6s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+html body main .fader .infoMain .infoBlock a {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 12px;
+  text-decoration: none;
+  padding: 5%;
+  margin-top: 7%;
+  font-family: "Work Sans", sans-serif;
+  background-color: tomato;
+  color: whitesmoke;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+  opacity: 0;
+  -webkit-animation: showMe 2.6s;
+          animation: showMe 2.6s;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+html body main .fader .infoMain .infoBlock a:hover, html body main .fader .infoMain .infoBlock a:focus {
+  border-color: transparent;
+  color: tomato;
+  -webkit-box-shadow: inset 0 -4.50em 0 0 whitesmoke;
+          box-shadow: inset 0 -4.50em 0 0 whitesmoke;
+}
+
+html .vert {
+  overflow-y: auto;
+}
+
+@-webkit-keyframes showMe {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showMe {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: tomato;
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff7961;
+}
+/*# sourceMappingURL=style.css.map */
