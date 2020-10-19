@@ -408,6 +408,94 @@ html{
 
         }
 
+        // Ko sam ja sekcija
+
+        .koSamJa{
+
+            width : 100%;
+            padding : 10% 0%;
+
+            .rowKoSamJa{
+
+                display: $f;
+
+                .colKoSamJa1{
+
+                    display: $f;
+                    justify-content: $c;
+                    align-items: $c;
+                    position: relative;
+
+                    &::before{
+
+                        content : '';
+                        position: absolute;
+                        width : 4px;
+                        height : 100%;
+                        background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c);
+                        background-size: 800% 800%;
+                        animation: gradientTomato 2s ease infinite;
+                        left : 6%;
+
+                    }
+
+                    
+                    .koSamJaInfo{
+
+                        width : 80%;
+                        font-family: $font;
+
+                        h2{
+
+                            color : whitesmoke;
+                            font-size: 2.7em;
+                            background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
+                            background-size: 800% 800%;
+                            animation: gradientTomato 4s ease infinite;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            text-align: $c;
+
+                        }
+
+                        p{
+
+                            letter-spacing: 2.5px;
+                            color : whitesmoke;
+                            padding-top: 9%;
+                            line-height: 35px;
+                            text-align: justify;
+
+                        }
+
+                    }
+
+                }
+
+                .colKoSamJa2{
+
+                    display: $f;
+                    justify-content: $c;
+
+                    .koSamJaSlika{
+
+                        width : 80%;
+
+                        img{
+                            
+                            max-width: 100%;
+                            height: auto;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
     }
 
     .vert{
@@ -431,6 +519,12 @@ html{
         opacity: 1;
     }
 
+}
+
+@keyframes gradientTomato {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
 }
 
 // Skroler
