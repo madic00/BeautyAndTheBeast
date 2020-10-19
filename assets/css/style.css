@@ -577,6 +577,15 @@ html body .plans h2 label {
   padding-bottom: .5%;
 }
 
+html body .plans .plansCont .rowPlans {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 html body .plans .plansCont .rowPlans .colPlanIshrane {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -624,8 +633,16 @@ html body .plans .plansCont .rowPlans .colPlanIshrane .planBox:hover > .planPict
 html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .planPictureHolder {
   position: absolute;
   width: 90%;
+}
+
+html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .planPictureHolder:first-child {
   left: -19%;
   top: 23%;
+}
+
+html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .planPictureHolder:last-child {
+  top: 23%;
+  left: 57%;
 }
 
 html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .planPictureHolder img {
@@ -696,6 +713,79 @@ html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .aboutPlan .order
   color: tomato;
   background-color: whitesmoke;
   border: 3px solid whitesmoke;
+}
+
+html body .plans .plansCont .rowPlans .colSpecialPlan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 12px;
+  padding: 5% 0%;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background: linear-gradient(8deg, #e85d46, #f24124, #f55238, #f3600c, orangered, tomato, red);
+  background-size: 800% 800%;
+  -webkit-animation: gradientTomato 2s ease infinite;
+          animation: gradientTomato 2s ease infinite;
+}
+
+html body .plans .plansCont .rowPlans .colSpecialPlan:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: -1px 2px 36px 13px #f06b1d;
+          box-shadow: -1px 2px 36px 13px #f06b1d;
+}
+
+html body .plans .plansCont .rowPlans .colSpecialPlan h3 {
+  color: whitesmoke;
+  font-size: 2em;
+  padding-bottom: 10%;
+  letter-spacing: 2px;
+}
+
+html body .plans .plansCont .rowPlans .colSpecialPlan .planIshraneITreninga {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+html body .plans .plansCont .rowPlans .colSpecialPlan .planIshraneITreninga:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+html body .plans .plansCont .rowPlans .colPlanTreninga .planTreninga {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 html .vert {

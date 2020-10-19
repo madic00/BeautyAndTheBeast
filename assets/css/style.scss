@@ -607,6 +607,9 @@ html{
 
                 .rowPlans{
 
+                    display: $f;
+                    justify-content: $c;
+
 
                     .colPlanIshrane{
 
@@ -647,8 +650,20 @@ html{
 
                                 position: absolute;
                                 width : 90%;
-                                left : -19%;
-                                top : 23%;
+
+                                &:first-child{
+
+                                    left : -19%;
+                                    top : 23%;
+
+                                }
+
+                                &:last-child{
+
+                                    top : 23%;
+                                    left : 57%;
+
+                                }
 
                                 img{
 
@@ -722,6 +737,66 @@ html{
                                 }
                                 
                             }
+
+                        }
+
+                    }
+
+                    .colSpecialPlan{
+
+                        display : $f;
+                        flex-direction: $co;
+                        border-radius: 12px;
+                        padding : 5% 0%;
+                        transition: .5s;
+                        background: linear-gradient(8deg, #e85d46, #f24124, #f55238, #f3600c, orangered, tomato, red);
+                        background-size: 800% 800%;
+                        animation: gradientTomato 2s ease infinite;
+
+                        &:hover{
+
+                            transform : scale(1.05);
+                            box-shadow: -1px 2px 36px 13px #f06b1d;
+
+                        }
+
+                        h3{
+
+                            color : whitesmoke;
+                            font-size: 2em;
+                            padding-bottom : 10%;
+                            letter-spacing: 2px;
+
+                        }
+
+                        .planIshraneITreninga{
+
+                            display: $f;
+                            flex-direction: $co;
+                            align-items: $c;
+                            justify-content: flex-start;
+                            box-shadow: none;
+
+                            &:hover{
+
+                                box-shadow: none;
+                                transform : scale(1);
+
+                            }
+
+                        }
+
+                    }
+
+                    .colPlanTreninga{
+
+
+                        .planTreninga{
+
+                            display : $f;
+                            flex-direction: $co;
+                            align-items: $sa;
+                            justify-content: flex-start;
 
                         }
 
