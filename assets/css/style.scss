@@ -5,6 +5,15 @@
 
 }
 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
 $f : flex;
 $sa : space-around;
 $sb : space-between;
@@ -57,7 +66,7 @@ html{
             width: 100%;
             height: 100vh;
             position: fixed;
-            z-index: 1001;
+            z-index: 1005 !important;
             display: $f;
             justify-content: $c;
             align-items: $c;
@@ -68,6 +77,7 @@ html{
             video{
 
                 width : 100%;
+                z-index: 1005 !important;
 
             }
 
@@ -79,7 +89,7 @@ html{
 
             width : 100%;
             position: fixed;
-            top: 0px;
+            top: 0%;
             display: $f;
             justify-content: $sa;
             align-items: $c;
@@ -114,7 +124,7 @@ html{
 
                 width : 55%;
 
-                .menu{
+                .mainMenu{
 
                     display: $f;
                     align-items: $c;
@@ -179,6 +189,138 @@ html{
                 }
 
             }
+
+        }
+
+        // Side nav trigger
+
+        #triggerSideNav{
+
+            position: fixed;
+            z-index: 1004;
+            top: 3%;
+            left: 5%;
+            font-size: 2em;
+            text-decoration: none;
+            transition: .2s;
+            display: none;
+
+                &:hover{
+
+                    transform: translateY(10%);
+
+                }
+
+                &:hover > i{
+
+                    color : darken(tomato, 5%);
+
+                }
+
+            i{
+
+                color : tomato;
+                transition: .2s;
+
+            }
+
+        }
+
+        // Side nav
+
+        .sideNav{
+
+            position: fixed;
+            top: 0%;
+            bottom: 0%;
+            width : 100%;
+            background-color: #141414;
+            z-index: 1003;
+            display: $f;
+            flex-direction: $co;
+            justify-content: $sa;
+            align-items: $c;
+            transform: translateY(-1500px);
+            transition: 1.4s;
+            
+            .sideMenu{
+
+                list-style-type: none;
+                text-align: $c;
+
+                li{
+
+                    margin : 30px 0%;
+
+                    a{
+
+                        text-decoration: none;
+                        color : tomato;
+                        font-size: 1.3em;
+                        display: inline-block;
+                        overflow: hidden;
+                        position: relative;
+                        padding : 5% 0%;
+                        font-family: $font;
+                        letter-spacing: 3px;
+
+                        &:after {
+
+                            content:'';
+                            position: absolute;
+                            width: 100%;
+                            height: 5px;
+                            bottom: -5%;
+                            left: 0;
+                            background-color: tomato;
+                            transform: scaleX(0);
+                            transform-origin: bottom right;
+                            transition: transform 0.3s;
+
+                        }
+                    
+                        &:hover {
+
+                            &:after {
+
+                                transform-origin: bottom left;
+                                transform: scaleX(1);
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .logoSideNav{
+
+                a{
+
+                    display: $f;
+                    justify-content: $c;
+                    align-items: $c;
+
+                    img{
+
+                        max-width: 100%;
+                        height: auto;
+                        width : 45%;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .sideNav1{
+
+            transform: translateY(0px);
 
         }
 

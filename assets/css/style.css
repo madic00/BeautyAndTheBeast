@@ -3,6 +3,15 @@
   margin: 0px;
 }
 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
 html {
   scroll-behavior: smooth;
   width: 100%;
@@ -38,7 +47,7 @@ html body .preloader {
   width: 100%;
   height: 100vh;
   position: fixed;
-  z-index: 1001;
+  z-index: 1005 !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,12 +64,13 @@ html body .preloader {
 
 html body .preloader video {
   width: 100%;
+  z-index: 1005 !important;
 }
 
 html body nav {
   width: 100%;
   position: fixed;
-  top: 0px;
+  top: 0%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,7 +111,7 @@ html body nav .menuNav {
   width: 55%;
 }
 
-html body nav .menuNav .menu {
+html body nav .menuNav .mainMenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,7 +124,7 @@ html body nav .menuNav .menu {
       justify-content: space-around;
 }
 
-html body nav .menuNav .menu li a {
+html body nav .menuNav .mainMenu li a {
   color: whitesmoke;
   text-decoration: none;
   font-size: 1.2em;
@@ -125,11 +135,11 @@ html body nav .menuNav .menu li a {
   font-family: "Work Sans", sans-serif;
 }
 
-html body nav .menuNav .menu li a:hover {
+html body nav .menuNav .mainMenu li a:hover {
   color: tomato;
 }
 
-html body nav .menuNav .menu li a:before, html body nav .menuNav .menu li a:after {
+html body nav .menuNav .mainMenu li a:before, html body nav .menuNav .mainMenu li a:after {
   height: 14px;
   width: 14px;
   position: absolute;
@@ -139,7 +149,7 @@ html body nav .menuNav .menu li a:before, html body nav .menuNav .menu li a:afte
   opacity: 0;
 }
 
-html body nav .menuNav .menu li a:before {
+html body nav .menuNav .mainMenu li a:before {
   left: -15%;
   top: -15%;
   border-left: 3px solid tomato;
@@ -148,7 +158,7 @@ html body nav .menuNav .menu li a:before {
           transform: translate(100%, 50%);
 }
 
-html body nav .menuNav .menu li a:after {
+html body nav .menuNav .mainMenu li a:after {
   right: -15%;
   bottom: -15%;
   border-right: 3px solid tomato;
@@ -157,14 +167,135 @@ html body nav .menuNav .menu li a:after {
           transform: translate(-100%, -50%);
 }
 
-html body nav .menuNav .menu li a:hover:before, html body nav .menuNav .menu li a:hover:after {
+html body nav .menuNav .mainMenu li a:hover:before, html body nav .menuNav .mainMenu li a:hover:after {
   -webkit-transform: translate(0%, 0%);
           transform: translate(0%, 0%);
   opacity: 1;
 }
 
-html body nav .menuNav .menu li a:hover {
+html body nav .menuNav .mainMenu li a:hover {
   color: #ff7961;
+}
+
+html body #triggerSideNav {
+  position: fixed;
+  z-index: 1004;
+  top: 3%;
+  left: 5%;
+  font-size: 2em;
+  text-decoration: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+  display: none;
+}
+
+html body #triggerSideNav:hover {
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+}
+
+html body #triggerSideNav:hover > i {
+  color: #ff4d2e;
+}
+
+html body #triggerSideNav i {
+  color: tomato;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+html body .sideNav {
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  width: 100%;
+  background-color: #141414;
+  z-index: 1003;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-1500px);
+          transform: translateY(-1500px);
+  -webkit-transition: 1.4s;
+  transition: 1.4s;
+}
+
+html body .sideNav .sideMenu {
+  list-style-type: none;
+  text-align: center;
+}
+
+html body .sideNav .sideMenu li {
+  margin: 30px 0%;
+}
+
+html body .sideNav .sideMenu li a {
+  text-decoration: none;
+  color: tomato;
+  font-size: 1.3em;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  padding: 5% 0%;
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: 3px;
+}
+
+html body .sideNav .sideMenu li a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  bottom: -5%;
+  left: 0;
+  background-color: tomato;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+html body .sideNav .sideMenu li a:hover:after {
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+html body .sideNav .logoSideNav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body .sideNav .logoSideNav a img {
+  max-width: 100%;
+  height: auto;
+  width: 45%;
+}
+
+html body .sideNav1 {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 html body main {
