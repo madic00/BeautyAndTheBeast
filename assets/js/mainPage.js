@@ -81,7 +81,7 @@ $(document).ready(function () {
 
             console.log(time - getTimeFromLocal, time, getTimeFromLocal)
 
-            if (time - getTimeFromLocal >= 5) {
+            if (time - getTimeFromLocal >= 50) {
 
                 setTimeout(function (e) {
 

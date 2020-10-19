@@ -410,12 +410,12 @@ html{
 
         // Ko sam ja sekcija
 
-        .koSamJa{
+        .specialSection{
 
             width : 100%;
             padding : 10% 0%;
 
-            .rowKoSamJa{
+            .rowSpec{
 
                 display: $f;
 
@@ -444,6 +444,10 @@ html{
 
                         width : 80%;
                         font-family: $font;
+                        display: $f;
+                        flex-direction: $co;
+                        justify-content: $sa;
+                        align-items: $c;
 
                         h2{
 
@@ -468,6 +472,73 @@ html{
 
                         }
 
+                        #rezultatiKlijenata{
+
+                            margin: 7% auto;
+                            transition: .5s;
+                            border-radius: 6px;
+                            text-decoration: none;
+                            width : 50%;
+                            text-align: $c;
+                            background-color: transparent;
+                            border : 3px solid tomato;
+                            line-height: 4em;
+                            color : tomato;
+                            letter-spacing: 2.2px;
+
+
+                            &:hover,&:focus {
+
+                              box-shadow: 0 0.7em 0.7em -0.4em #eb5527;
+                              transform: translateY(-0.25em);
+                              color : whitesmoke;
+                              background-color: tomato;
+
+                            }
+
+                            
+
+                        }
+
+                    }
+
+                }
+
+                .colZastoBasJa1{
+
+                    display: $f;
+                    justify-content: $c;
+                    align-items: $c;
+                    
+                    #videoZastoBasJa{
+
+                        width : 90%;
+
+                    }
+
+                }
+
+                .colZastoBasJa2{
+
+                    position: relative;
+
+                    &::before{
+
+                        display: none;
+
+                    }
+
+                    &::after{
+
+                        content : '';
+                        position: absolute;
+                        width : 4px;
+                        height : 100%;
+                        background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c);
+                        background-size: 800% 800%;
+                        animation: gradientTomato 2s ease infinite;
+                        right : 7% !important;
+
                     }
 
                 }
@@ -485,6 +556,172 @@ html{
                             
                             max-width: 100%;
                             height: auto;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .zastoBasJa{
+
+            background-color: darken(#141414, .8%);
+
+        }
+
+        // Planovi sekcija
+
+        .plans{
+
+            padding : 5% 0%;
+
+            h2{
+
+                color : whitesmoke;
+                font-size: 2.7em;
+                background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
+                background-size: 800% 800%;
+                animation: gradientTomato 4s ease infinite;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-align: $c;
+                padding-bottom: 8%;
+                
+                label{
+
+                    font-size: 1em;
+                    color: #006378;
+                    border-bottom: 3px solid tomato;
+                    padding-bottom: .5%;
+
+                }
+
+            }
+            
+            .plansCont{
+
+
+                .rowPlans{
+
+
+                    .colPlanIshrane{
+
+                        display: $f;
+                        justify-content: $c;
+                        align-items: $c;
+
+
+                        .planBox{
+
+                            width : 90%;
+                            display: $f;
+                            background-color: lighten(#141414, 5%);
+                            position: relative;
+                            justify-content: flex-end;
+                            height : 400px;
+                            border-radius : 12px;
+                            border : 2px solid tomato;
+                            padding : 15% 0%;
+                            box-shadow: none;
+                            transition: .5s;
+
+                            &:hover{
+
+                                box-shadow: -1px 2px 36px 13px tomato;
+                                transform : scale(1.05);
+
+                            }
+
+                            &:hover > .planPictureHolder > img{
+
+                                filter : grayscale(0%);
+
+                            }
+
+
+                            .planPictureHolder{
+
+                                position: absolute;
+                                width : 90%;
+                                left : -19%;
+                                top : 23%;
+
+                                img{
+
+                                    width : 70%;
+                                    max-width: 100%;
+                                    height: auto;
+                                    border-radius: 12px;
+                                    border : 3px solid tomato;
+                                    transition: .5s;
+
+                                }
+
+                            }
+
+                            .aboutPlan{
+
+                                width : 50%;
+                                height : 100%;
+                                display: $f;
+                                flex-direction: $co;
+                                justify-content: $sb;
+                                align-items: $c;
+                                font-family: $font;
+
+                                h3{
+
+                                    color : tomato;
+                                    font-size : 1.9em;
+                                    text-align: $c;
+                                    letter-spacing: 2px;
+
+                                }
+
+                                p{
+
+                                    color : #eea24c;
+                                    letter-spacing: 2px;
+                                    line-height: 1.7em;
+                                    text-align: $c;
+                                    font-size: 1.2em;
+
+                                    span{
+
+                                        font-size : 1.3em;
+
+                                    }
+
+                                }
+
+                                .orderPlanButton{
+
+                                    width : 87%;
+                                    text-align: $c;
+                                    color : whitesmoke;
+                                    line-height: 3em;
+                                    background-color: tomato;
+                                    border : 3px solid tomato;
+                                    text-decoration: none;
+                                    border-radius : 6px;
+                                    letter-spacing: 2px;
+                                    transition: .5s;
+
+                                    &:hover,
+                                    &:focus {
+                                        box-shadow: inset 0 0 0 2em whitesmoke;
+                                        color : tomato;
+                                        background-color: whitesmoke;
+                                        border : 3px solid whitesmoke;
+                                    }
+
+                                }
+                                
+                            }
 
                         }
 
