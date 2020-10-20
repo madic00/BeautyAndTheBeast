@@ -3,13 +3,11 @@
   margin: 0px;
 }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
+html, body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 html {
@@ -420,6 +418,7 @@ html body .specialSection .rowSpec .colKoSamJa1 {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  padding: 0px;
 }
 
 html body .specialSection .rowSpec .colKoSamJa1::before {
@@ -512,6 +511,7 @@ html body .specialSection .rowSpec .colZastoBasJa1 #videoZastoBasJa {
 }
 
 html body .specialSection .rowSpec .colZastoBasJa2 {
+  padding: 0px;
   position: relative;
 }
 
@@ -538,6 +538,7 @@ html body .specialSection .rowSpec .colKoSamJa2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0px;
 }
 
 html body .specialSection .rowSpec .colKoSamJa2 .koSamJaSlika {

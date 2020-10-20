@@ -5,14 +5,7 @@
 
 }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-}
+
 
 $f : flex;
 $sa : space-around;
@@ -21,6 +14,14 @@ $c : center;
 $co : column;
 $fw : wrap;
 $font : 'Work Sans', sans-serif;
+
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
 
 html{
 
@@ -425,6 +426,7 @@ html{
                     justify-content: $c;
                     align-items: $c;
                     position: relative;
+                    padding : 0px;
 
                     &::before{
 
@@ -520,6 +522,7 @@ html{
 
                 .colZastoBasJa2{
 
+                    padding : 0px;
                     position: relative;
 
                     &::before{
@@ -547,6 +550,7 @@ html{
 
                     display: $f;
                     justify-content: $c;
+                    padding : 0px;
 
                     .koSamJaSlika{
 
