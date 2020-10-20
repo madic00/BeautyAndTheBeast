@@ -639,17 +639,11 @@ html{
 
                             }
 
-                            &:hover > .planPictureHolder > img{
-
-                                filter : grayscale(0%);
-
-                            }
-
 
                             .planPictureHolder{
 
                                 position: absolute;
-                                width : 90%;
+                                width : 60%;
 
                                 &:first-child{
 
@@ -661,13 +655,13 @@ html{
                                 &:last-child{
 
                                     top : 23%;
-                                    left : 57%;
+                                    right : -20%;
 
                                 }
 
                                 img{
 
-                                    width : 70%;
+                                    width : 100%;
                                     max-width: 100%;
                                     height: auto;
                                     border-radius: 12px;
@@ -849,7 +843,7 @@ html{
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #141414;
+    background: lighten(#141414, 5%);
   }
   
   /* Handle */

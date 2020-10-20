@@ -625,14 +625,9 @@ html body .plans .plansCont .rowPlans .colPlanIshrane .planBox:hover {
           transform: scale(1.05);
 }
 
-html body .plans .plansCont .rowPlans .colPlanIshrane .planBox:hover > .planPictureHolder > img {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
-}
-
 html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .planPictureHolder {
   position: absolute;
-  width: 90%;
+  width: 60%;
 }
 
 html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .planPictureHolder:first-child {
@@ -642,11 +637,11 @@ html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .planPictureHolde
 
 html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .planPictureHolder:last-child {
   top: 23%;
-  left: 57%;
+  right: -20%;
 }
 
 html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .planPictureHolder img {
-  width: 70%;
+  width: 100%;
   max-width: 100%;
   height: auto;
   border-radius: 12px;
@@ -842,7 +837,7 @@ html .vert {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #141414;
+  background: #212121;
 }
 
 /* Handle */
