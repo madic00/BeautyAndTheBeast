@@ -49,14 +49,19 @@
 
     <div class="preloader">
 
-        <video autoplay muted onloadedmetadata="this.muted = true">
+        <video id='playMeNow' src="assets/videos/preloadVideoNew.mp4" autoplay muted
+            onloadedmetadata="this.muted = true">
 
-            <source src="assets/videos/preloadVideoNew.mp4" type="video/mp4" />
+            <!-- <source src="assets/videos/preloadVideoNew.mp4" type="video/mp4" /> -->
             <!-- <source src="assets/videos/preloadVideo.ogg" type="video/ogg" />
             <source src="assets/videos/preloadVideo.webm" type="video/webm" /> -->
-            Your browser does not support the video tag.
+            <!-- Your browser does not support the video tag. -->
 
         </video>
+
+        <script>
+            document.getElementById('playMeNow').play();
+        </script>
 
     </div>
 
@@ -193,7 +198,7 @@
 
     <section class="container-fluid plans" id='goTopPlans'>
 
-        <h2>Pl<label>anov</label>i</h2>
+        <h2>Planovi</h2>
 
         <div class="plansCont container">
 
@@ -283,7 +288,7 @@
 
     <section class="contactMe container-fluid" id='goTopContact'>
 
-        <h2>Ima<label>te Pitan</label>je ?</h2>
+        <h2>Imate Pitanje ?</h2>
 
         <div class="container contactMeContainer">
 
