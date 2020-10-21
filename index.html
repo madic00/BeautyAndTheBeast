@@ -32,9 +32,18 @@
 
 <body>
 
+    <!-- Go to top strelica -->
+
+    <a href="#!" class='goTop'>
+
+        <i class="fas fa-chevron-up"></i>
+
+    </a>
+
     <!-- Youtube button -->
 
-    <a href="#!" class='ytButton'><i class="fab fa-youtube"></i></a>
+    <a href="https://www.youtube.com/channel/UC-QIbqxqc3HUu2piUkplyyw" target="_blank" class='ytButton'><i
+            class="fab fa-youtube"></i></a>
 
     <!-- Preload -->
 
@@ -76,17 +85,17 @@
 
     <!-- Side navigacija -->
 
-    <!-- <div class="sideNav">
+    <div class="sideNav">
 
         <ul class="menu sideMenu"></ul>
 
         <div class="allLogos logoSideNav"></div>
 
-    </div> -->
+    </div>
 
     <!-- Main sekcija -->
 
-    <main>
+    <main id='goTopMain'>
 
         <div class="fader">
 
@@ -96,7 +105,7 @@
 
                     <img src="assets/images/milosLogo.png" class='img-fluid' alt="Logo" />
 
-                    <a href="#!">Vreme je za promenu</a>
+                    <a href="#goTopKoSamJa">Vreme je za promenu</a>
 
                 </div>
 
@@ -108,7 +117,7 @@
 
     <!-- Ko sam ja sekcija -->
 
-    <section class="container-fluid koSamJa specialSection">
+    <section class="container-fluid koSamJa specialSection" id="goTopKoSamJa">
 
         <div class="row rowKoSamJa rowSpec">
 
@@ -148,7 +157,7 @@
 
     <!-- Zasto bas ja sekcija -->
 
-    <section class="container-fluid zastoBasJa specialSection">
+    <section class="container-fluid zastoBasJa specialSection" id='goTopZastoBasJa'>
 
         <div class="row rowZastoBasJa rowSpec">
 
@@ -182,7 +191,7 @@
 
     <!-- Planovi -->
 
-    <section class="container-fluid plans">
+    <section class="container-fluid plans" id='goTopPlans'>
 
         <h2>Pl<label>anov</label>i</h2>
 
@@ -190,7 +199,7 @@
 
             <div class="row rowPlans">
 
-                <div class="col-lg-4 colPlanIshrane">
+                <!-- <div class="col-lg-4 colPlanIshrane">
 
                     <div class="planBox planIshrane">
 
@@ -222,7 +231,7 @@
 
                         <div class="planPictureHolder">
 
-                            <!-- <img src="assets/images/planIshrane.jpg" class='img-fluid' alt="Plan Ishrane" /> -->
+                            <img src="assets/images/planIshrane.jpg" class='img-fluid' alt="Plan Ishrane" />
 
                         </div>
 
@@ -262,13 +271,127 @@
 
                     </div>
 
-                </div>
+                </div> -->
 
             </div>
 
         </div>
 
     </section>
+
+    <!-- Kontakt forma -->
+
+    <section class="contactMe container-fluid" id='goTopContact'>
+
+        <h2>Ima<label>te Pitan</label>je ?</h2>
+
+        <div class="container contactMeContainer">
+
+            <div class="topPartContact">
+
+                <p>Kontaktirajte me putem Instagrama :</p>
+
+                <div class="instagramInfo">
+                    <p><a href="https://www.instagram.com/milos_premcevic/" id='igName'
+                            target="_blank">@milos_premcevic</a> ili kliknite na ikonicu Instagrama
+                        <a href="https://www.instagram.com/milos_premcevic/" id='igIcon' target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    <p>
+                </div>
+
+            </div>
+
+            <p id='midPartContact'>ILI</p>
+
+            <div class="bottomPartContact">
+
+                <p>Popunite Formu</p>
+
+                <input type="text" id='imePrezimeContact' class="formField" name="fullName"
+                    placeholder="Vaše ime i prezime ..." />
+
+                <p id='firstLastNameContactError' class="contactFormErrorPar">Ime i prezime nije dobro uneto. <br>Primer
+                    pravilno unetog imena i
+                    prezimena : Jasmina Lukić, Nikola Hadzi Ristić, ...</p>
+
+                <br>
+
+                <textarea placeholder="Vaše pitanje ..." class="formField" name="questionForMilos" id="pitanjeZaMilosa"
+                    cols="30" rows="10"></textarea>
+
+                <p id='sendMessageContactError' class="contactFormErrorPar">Morate napisati barem karaktera u polju za
+                    pitanje.
+                </p>
+
+                <br>
+
+                <button id='posaljiPitanje'>Pošaljite Pitanje</button>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer class='container-fluid'>
+
+        <div class="row rowFooter">
+
+            <div class="col-lg-4 colSocialsFooter">
+
+                <div class="socialsFooter">
+
+                    <p>Pratite me :</p>
+
+                    <div class="socialsIcons">
+
+                        <a href="https://www.instagram.com/milos_premcevic/" id='igIcon' target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+
+                        <a href="https://www.youtube.com/channel/UC-QIbqxqc3HUu2piUkplyyw" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 colSocialsNav">
+
+                <p>Navigacija</p>
+
+                <div class="footerNav">
+
+                    <ul class='menu footerMenu'>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 colLogoFooter">
+
+                <div class="logoFooter">
+
+                    <div class="allLogos">
+
+                    </div>
+
+                    <p>Copyright &copy; 2020 Beauty And The Beast. <br />All rights reserved.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
 
     <!-- jQuery -->
 
@@ -280,6 +403,7 @@
 
     <!-- JS fajlovi -->
 
+    <script src="assets/js/nav.js"></script>
     <script src="assets/js/mainPage.js"></script>
 
 </body>

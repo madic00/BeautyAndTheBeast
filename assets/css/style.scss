@@ -5,7 +5,68 @@
 
 }
 
+// Rezolucije za responsive
 
+$d0: 1390px;
+$d1 : 1200px;
+$d2: 992px;
+$d3: 768px;
+$d4: 576px;
+$d5: 480px;
+$d6: 386px;
+
+// Mixini za resposnive
+
+@mixin d0 {
+    @media (max-width: #{$d0}){
+        @content;
+    }
+}
+
+@mixin d1 {
+    @media (max-width: #{$d1}){
+        @content;
+    }
+}
+
+@mixin d1 {
+    @media (max-width: #{$d1}){
+        @content;
+    }
+}
+
+
+@mixin d2 {
+    @media (max-width: #{$d2}){
+        @content;
+    }
+}
+
+@mixin d3 {
+    @media (max-width: #{$d3}){
+        @content;
+    }
+}
+
+@mixin d4 {
+    @media (max-width: #{$d4}){
+        @content;
+    }
+}
+
+@mixin d5 {
+    @media (max-width: #{$d5}){
+        @content;
+    }
+}
+
+@mixin d6 {
+    @media (max-width: #{$d6}){
+        @content;
+    }
+}
+
+// Promenljive za css
 
 $f : flex;
 $sa : space-around;
@@ -34,6 +95,46 @@ html{
         background-color: #141414;
         overflow: hidden;
 
+        // Go to top strelica
+
+        .goTop{
+
+            position: fixed;
+            z-index: 1004;
+            bottom : 4%;
+            right : 3%;
+            transform: translateY(200px);
+            transition: .6s;
+
+            @include d4{
+
+                bottom : 2%;
+
+            }
+
+            i{
+
+                color : tomato;
+                font-size : 2.4em;
+                transition: .6s;
+
+                &:hover{
+
+                    transform : translateY(-10px);
+                    color : lighten(tomato, 10%);
+
+                }
+
+            }
+
+        }
+
+        .goTop1{
+
+            transform: translateY(0px);
+
+        }
+
         // Youtube button
 
         .ytButton{
@@ -44,11 +145,35 @@ html{
             z-index: 1000;
             transition: .6s;
 
+            @include d1{
+
+                right : 1%;
+
+            }
+
+            @include d2{
+
+                right : 2%;
+
+            }
+
             i{
 
                 font-size: 2.4em;
                 color : tomato;
                 transition: .5s;
+
+                @include d1{
+
+                    font-size : 2em;
+
+                }
+
+                @include d2{
+
+                    font-size : 2.4em;
+
+                }
 
                 &:hover{
 
@@ -67,7 +192,7 @@ html{
             width: 100%;
             height: 100vh;
             position: fixed;
-            z-index: 1005 !important;
+            z-index: 1007 !important;
             display: $f;
             justify-content: $c;
             align-items: $c;
@@ -99,6 +224,12 @@ html{
             padding : 0.5% 0%;
             transition : .6s;
 
+            @include d2{
+
+                display: none;
+
+            }
+
             .logoNav{
 
                 width : 25%;
@@ -125,6 +256,12 @@ html{
 
                 width : 55%;
 
+                @include d1{
+
+                    width : 50%;
+
+                }
+
                 .mainMenu{
 
                     display: $f;
@@ -132,6 +269,12 @@ html{
                     margin : 0px;
                     list-style-type: none;
                     justify-content: $sa;
+
+                    @include d1{
+
+                        justify-content: $sb;
+
+                    }
 
                     li{
 
@@ -144,6 +287,12 @@ html{
                             transition: .6s;
                             letter-spacing: 2.5px;
                             font-family: $font;
+
+                            @include d1{
+
+                                font-size: 1em;
+
+                            }
 
                             &:hover{
                                 color: tomato;
@@ -198,13 +347,19 @@ html{
         #triggerSideNav{
 
             position: fixed;
-            z-index: 1004;
+            z-index: 1005;
             top: 3%;
             left: 5%;
             font-size: 2em;
             text-decoration: none;
             transition: .2s;
             display: none;
+
+            @include d2{
+
+                display : block;
+
+            }
 
                 &:hover{
 
@@ -236,7 +391,7 @@ html{
             bottom: 0%;
             width : 100%;
             background-color: #141414;
-            z-index: 1003;
+            z-index: 1004;
             display: $f;
             flex-direction: $co;
             justify-content: $sa;
@@ -357,6 +512,12 @@ html{
                     justify-content: $c;
                     text-align: $c;
 
+                    @include d2{
+
+                        align-items: $c;
+
+                    }
+
                     .infoBlock{
 
                         display: $f;
@@ -428,6 +589,12 @@ html{
                     position: relative;
                     padding : 0px;
 
+                    @include d2{
+
+                        margin-bottom: 10%;
+
+                    }
+
                     &::before{
 
                         content : '';
@@ -462,6 +629,18 @@ html{
                             -webkit-text-fill-color: transparent;
                             text-align: $c;
 
+                            @include d4{
+
+                                font-size : 2.3em;
+
+                            }
+
+                            @include d6{
+
+                                font-size : 1.9em;
+
+                            }
+
                         }
 
                         p{
@@ -471,6 +650,18 @@ html{
                             padding-top: 9%;
                             line-height: 35px;
                             text-align: justify;
+
+                            @include d2{
+
+                                padding-top : 5%;
+
+                            }
+
+                            @include d6{
+
+                                font-size : .9em;
+
+                            }
 
                         }
 
@@ -487,6 +678,18 @@ html{
                             line-height: 4em;
                             color : tomato;
                             letter-spacing: 2.2px;
+
+                            @include d1{
+
+                                width : 65%;
+
+                            }
+
+                            @include d6{
+
+                                width : 85%;
+
+                            }
 
 
                             &:hover,&:focus {
@@ -540,7 +743,7 @@ html{
                         background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c);
                         background-size: 800% 800%;
                         animation: gradientTomato 2s ease infinite;
-                        right : 7% !important;
+                        right : 6% !important;
 
                     }
 
@@ -555,6 +758,12 @@ html{
                     .koSamJaSlika{
 
                         width : 80%;
+
+                        @include d2{
+
+                            width : 70%;
+
+                        }
 
                         img{
                             
@@ -575,13 +784,40 @@ html{
 
             background-color: darken(#141414, .8%);
 
+            .rowZastoBasJa{
+
+                display : $f;
+
+                .colZastoBasJa1{
+
+                    @include d2{
+
+                        order : 2;
+
+                    }
+
+                }
+
+                .colZastoBasJa2{
+
+                    @include d2{
+
+                        order : 1;
+
+                    }
+
+                }
+
+            }
+
         }
 
         // Planovi sekcija
 
         .plans{
 
-            padding : 5% 0%;
+            padding : 10% 0%;
+            font-family: $font;
 
             h2{
 
@@ -594,6 +830,12 @@ html{
                 -webkit-text-fill-color: transparent;
                 text-align: $c;
                 padding-bottom: 8%;
+
+                @include d6{
+
+                    font-size : 2.2em;
+
+                }
                 
                 label{
 
@@ -621,6 +863,120 @@ html{
                         justify-content: $c;
                         align-items: $c;
 
+                        &:last-child > .planBox{
+
+                            display : $f;
+                            flex-direction: $co;
+                            align-items: $sa;
+                            justify-content: flex-start;
+
+                        }
+
+                        &:last-child > .planBox > .planPictureHolder{
+
+                            position: absolute;
+                            top : 23%;
+                            right : -19% !important;
+
+                            @include d0{
+
+                                width : 55%;
+                                top : 25%;
+                                right : -14% !important;
+
+                            }
+
+                            @include d1{
+
+                                width : 50%;
+                                top : 30%;
+                                right : -14% !important;
+
+                            }
+
+                            @include d2{
+
+                                width : 40%;
+                                top : 20%;
+                                right : -4% !important;
+
+                            }
+
+                            @include d3{
+
+                                width : 45%;
+                                top : 25%;
+                                right : -8% !important;
+
+                            }
+
+                            @include d5{
+
+                                top : 30%;
+
+                            }
+
+                            @include d6{
+
+                                top : 35%;
+                                width : 47%;
+
+                            }
+
+                        }
+
+                        &:first-child > .planBox > .planPictureHolder{
+
+                            left : -19%;
+                            top : 23%;
+
+                            @include d0{
+
+                                width : 55%;
+                                top : 25%;
+                                left : -14% !important;
+
+                            }
+
+                            @include d1{
+
+                                width : 50%;
+                                top : 30%;
+                                left : -14% !important;
+
+                            }
+
+                            @include d2{
+
+                                width : 40%;
+                                top : 20%;
+                                left : -4% !important;
+
+                            }
+
+                            @include d3{
+
+                                width : 45%;
+                                top : 25%;
+                                left : -8% !important;
+
+                            }
+
+                            @include d5{
+
+                                top : 30%;
+
+                            }
+
+                            @include d6{
+
+                                top : 35%;
+                                width : 47%;
+
+                            }
+
+                        }
+
 
                         .planBox{
 
@@ -636,6 +992,18 @@ html{
                             box-shadow: none;
                             transition: .5s;
 
+                            @include d2{
+
+                                margin : 7% 0%;
+
+                            }
+
+                            @include d3{
+
+                                margin : 9% 0%;
+
+                            }
+
                             &:hover{
 
                                 box-shadow: -1px 2px 36px 13px tomato;
@@ -648,20 +1016,6 @@ html{
 
                                 position: absolute;
                                 width : 60%;
-
-                                &:first-child{
-
-                                    left : -19%;
-                                    top : 23%;
-
-                                }
-
-                                &:last-child{
-
-                                    top : 23%;
-                                    right : -20%;
-
-                                }
 
                                 img{
 
@@ -686,12 +1040,30 @@ html{
                                 align-items: $c;
                                 font-family: $font;
 
+                                @include d0{
+
+                                    width : 60%;
+
+                                }
+
                                 h3{
 
                                     color : tomato;
                                     font-size : 1.9em;
                                     text-align: $c;
                                     letter-spacing: 2px;
+
+                                    @include d1{
+
+                                        font-size: 1.9em;
+
+                                    }
+
+                                    @include d6{
+
+                                        font-size : 1.6em;
+
+                                    }
 
                                 }
 
@@ -751,6 +1123,12 @@ html{
                         background-size: 800% 800%;
                         animation: gradientTomato 2s ease infinite;
 
+                        @include d4{
+
+                            padding : 10% 0%;
+
+                        }
+
                         &:hover{
 
                             transform : scale(1.05);
@@ -764,6 +1142,12 @@ html{
                             font-size: 2em;
                             padding-bottom : 10%;
                             letter-spacing: 2px;
+
+                            @include d4{
+
+                                padding-bottom: 3%;
+
+                            }
 
                         }
 
@@ -806,6 +1190,495 @@ html{
 
         }
 
+        // Kontakt sekcija
+
+        .contactMe{
+
+            background-color: darken(#141414, .8%);
+            display: $f;
+            flex-direction: $co;
+            justify-content: $c;
+            align-items: $c;
+            font-family: $font;
+            padding : 10% 0%;
+
+            h2{
+
+                color : whitesmoke;
+                font-size: 2.7em;
+                background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
+                background-size: 800% 800%;
+                animation: gradientTomato 4s ease infinite;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-align: $c;
+                padding-bottom: 8%;
+
+                @include d4{
+
+                    font-size : 2.3em;
+
+                }
+
+                @include d3{
+
+                    padding-bottom : 13%;
+
+                }
+                
+                label{
+
+                    font-size: 1em;
+                    color: #006378;
+                    border-bottom: 3px solid tomato;
+                    padding-bottom: 4.5%;
+
+                }
+
+            }
+
+            .contactMeContainer{
+
+                //background-color: cyan;
+                display: $f;
+                flex-direction: $co;
+                justify-content: $c;
+                align-items: $c;
+                text-align: $c;
+                font-family: $font;
+
+                
+                .topPartContact{
+
+                    display: $f;
+                    flex-direction: $co;
+                    justify-content: $c;
+                    align-items: $c;
+
+                    p{
+
+                        color : tomato;
+                        font-size : 1.5em;
+
+                        @include d5{
+
+                            padding-bottom : 5%;
+
+                        }
+
+                    }
+
+                    .instagramInfo{
+
+
+                        p{
+
+
+                            #igName{
+
+                                text-decoration : none;
+                                color : orange;
+                                transition: .6s;
+
+                                &:hover{
+
+                                    color : rgb(255, 214, 137);
+
+                                }
+
+                            }
+
+                            #igIcon{
+
+                                text-decoration : none;
+                                transition: .6s;
+                                width : auto;
+
+                                i{
+
+                                    color : #c800c8;
+                                    font-size : 1.4em;
+                                    vertical-align: middle;
+                                    transition: .6s;
+
+                                    &:hover{
+
+                                        color : lighten(#ee73ee, 7%);
+
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                #midPartContact{
+
+                    color : whitesmoke;
+                    font-size : 2em;
+                    letter-spacing: 2px;
+                    padding : 1% 0%;
+
+                    @include d2{
+
+                        padding : 3% 0%;
+
+                    }
+
+                    @include d5{
+
+                        padding : 1% 0% 3% 0%;
+
+                    }
+
+                }
+
+                .bottomPartContact{
+
+                    width : 100%;
+                    display: $f;
+                    flex-direction: $co;
+                    justify-content: $c;
+                    align-items: $c;
+
+                    p{
+
+                        color : #fbb023;
+                        font-size : 2em;
+                        padding-bottom: 2.5%;
+
+                        @include d4{
+
+                            padding-bottom : 7%;
+
+                        }
+
+                    }
+
+                    .contactFormErrorPar{
+
+                        color : tomato;
+                        text-align: $c;
+                        font-size: 1.3em;
+                        padding-top: 2%;
+                        letter-spacing: 1.2px;
+                        line-height: 1.8em;
+                        display : none;
+
+                        @include d5{
+
+                            font-size : 1.1em;
+
+                        }
+
+                    }
+
+                    .formField{
+
+                        width : 40%;
+                        background-color: transparent;
+                        border : 2px solid tomato;
+                        color : tomato;
+                        border-radius: 6px;
+                        resize: none;
+                        padding : 1%;
+                        margin : .5% 0%;
+
+                        @include d2{
+
+                            width : 70%;
+
+                        }
+
+                        @include d5{
+
+                            width : 85%;
+                            padding : 2%;
+
+                        }
+
+                        &::placeholder{
+
+                            color : whitesmoke;
+
+                        }
+
+                    }
+
+                    #posaljiPitanje{
+
+                        background-color: tomato;
+                        border-radius: 6px;
+                        border : 2px solid tomato;
+                        color : whitesmoke;
+                        width : 20%;
+                        line-height: 3.4em;
+                        outline: none;
+                        letter-spacing: 1.5px;
+                        transition: .6s;
+
+                        @include d2{
+
+                            width : 35%;
+
+                        }
+
+                        @include d3{
+
+                            width : 45%;
+
+                        }
+
+                        @include d5{
+
+                            width : 60%;
+
+                        }
+
+                        @include d6{
+
+                            width : 70%;
+
+                        }
+
+                        &:hover, 
+                        &:focus {
+
+                        animation: pulse 1s;
+                        box-shadow: 0 0 0 2em rgba(#fff,0);
+                        background-color: lighten(tomato, 5%);
+                        border : 2px solid lighten(tomato, 5%);
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        footer{
+
+            background-color: #141414;
+            padding : 10% 0%;
+            font-family: $font;
+
+            .rowFooter{
+
+                display: $f;
+
+                .colSocialsFooter{
+
+                    display: $f;
+                    justify-content: $c;
+                    align-items: $c;
+
+                    @include d2{
+
+                        order : 2;
+                        margin : 7% 0%;
+
+                    }
+
+                    @include d5{
+
+                        margin : 10% 0%;
+
+                    }
+
+                    .socialsFooter{
+
+
+                        p{
+
+                            color : orange;
+                            font-size : 1.7em;
+                            letter-spacing: 1.7px;
+
+                        }
+
+                        .socialsIcons{
+
+                            width : 100%;
+                            display: $f;
+                            justify-content: $sa;
+                            align-items: $c;
+
+                            a{
+
+                                text-decoration: none;
+
+                                &:first-child{
+
+                                    color : #b329b3;
+                                    transition: .3s;
+
+                                    &:hover{
+
+                                        color : lighten(#b329b3, 15%);
+
+                                    }
+
+                                }
+
+                                &:last-child{
+
+                                    color : tomato;
+                                    transition: .3s;
+
+                                    &:hover{
+
+                                        color : darken(tomato, 15%);
+
+                                    }
+
+                                }
+
+                                i{
+
+                                    font-size : 1.9em;
+                                    transition: .3s;
+
+                                    @include d2{
+
+                                        font-size : 2.2em;
+
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                .colSocialsNav{
+
+                    display: $f;
+                    flex-direction: $co;
+                    justify-content: $c;
+                    align-items: $c;
+
+                    @include d2{
+
+                        order : 1;
+
+                    }
+
+                    p{
+
+                        color : tomato;
+                        font-size : 1.7em;
+                        letter-spacing: 1.8px;
+
+                    }
+
+                    .footerNav{
+
+                        
+                        ul{
+
+                            text-align: $c;
+                            list-style-type: none;
+
+                            li{
+
+                                margin : 10px 0px;
+
+                                @include d2{
+
+                                    margin : 15px 0px;
+
+                                }
+
+                                a{
+
+                                    color : whitesmoke;
+                                    letter-spacing: 2px;
+                                    font-size : 1.4em;
+                                    text-decoration: none;
+                                    transition: .6s;
+
+                                    @include d5{
+
+                                        font-size : 1.1em;
+
+                                    }
+
+                                    &:hover{
+
+                                        color : orangered;
+
+                                    }
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                .colLogoFooter{
+
+                    display: $f;
+                    justify-content: $c;
+                    align-items: $c;
+                    
+                    @include d2{
+
+                        order : 3;
+
+                    }
+
+                    .logoFooter{
+
+                        text-align: $c;
+                        display: $f;
+                        flex-direction: $co;
+                        justify-content: $c;
+                        align-items: $c;
+
+                        .allLogos{
+
+                            width : 40%;
+
+                            img{
+
+                                max-width: 100%;
+                                height: auto;
+
+                            }
+
+                        }
+
+                        p{
+
+                            color : whitesmoke;
+                            padding-top: 8%;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
     }
 
     .vert{
@@ -818,6 +1691,10 @@ html{
 
 
 // Animacije
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 tomato; }
+  }
 
 @keyframes showMe{
 

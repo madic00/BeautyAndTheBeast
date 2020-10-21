@@ -1,36 +1,19 @@
 $(document).ready(function () {
 
-    // Animacija za side navigation
+    // Slanje pitanja Milosu, preko contact forme
 
-    $('#triggerSideNav').click(() => {
+    $('#posaljiPitanje').on('click', posaljiPitanjeMilosu);
 
-        $('.sideNav').toggleClass('sideNav1');
-
-    });
-
-    $(document).on('click', '.sideMenu li a', () => {
-
-        $('.sideNav').removeClass('sideNav1');
-
-    });
-
-    $(document).on('click', '.logoSideNav', () => {
-
-
-        $('.sideNav').removeClass('sideNav1');
-
-    });
-
-    // Ispis menija pomocu json-a
+    // Prikaz planova iz json-a
 
     $.ajax({
 
-        url: "assets/json/nav.json",
+        url: "assets/json/plans.json",
         method: "GET",
         dataType: "json",
         success: function (data) {
 
-            printMenu(data);
+            printPlans(data);
 
         },
         error: function (err, msg, type) {
@@ -121,70 +104,139 @@ $(document).ready(function () {
 
     }
 
-    // Menjanje navigacije kada se skroluje na sajtu
+});
 
-    $(window).scroll(function () {
 
-        const scroll = $(window).scrollTop();
+// Funkcije
 
-        if (scroll > 50) {
+function posaljiPitanjeMilosu() {
 
-            $('nav').css('background-color', 'black');
+    // Niz greski
 
-            $('nav .logoNav .logoImage img').css('width', '130px');
+    let greskaContactNiz = [];
 
-            $('.ytButton').css('top', '5.6%');
+    // Hvatanje polja
+
+    let imeIPrezimeContact = document.getElementById('imePrezimeContact').value;
+
+    let porukaContact = document.getElementById('pitanjeZaMilosa').value;
+
+    // Hvatanje paragrafa greski
+
+    let greskaImeIPrezimeContact = document.getElementById('firstLastNameContactError');
+
+    let greskaPorukaContact = document.getElementById('sendMessageContactError');
+
+    // Regexi
+
+    let imeIPrezimeContactRegex = /^[A-ZŠĐČĆŽ][a-zšđčćž]{2,}\s[A-ZŠĐČĆŽ][a-zšđčćž]{2,}(\s[A-ZŠĐČĆŽ][a-zšđčćž]{2,}){0,2}$/;
+
+    let porukaContactRegex = /^.{10,}$/;
+
+    // Funckija za proveru
+
+    function proveriPoljaZaContact(imePolja, regexPolja, paragrafGreske) {
+
+        if (regexPolja.test(imePolja)) {
+
+            paragrafGreske.style.display = 'none';
 
         }
 
         else {
 
-            $('nav').css('background', 'transparent');
+            paragrafGreske.style.display = 'block';
 
-            $('.ytButton').css('top', '6.5%');
-
-            $('nav .logoNav .logoImage img').css('width', '150px');
+            greskaContactNiz.push("greska");
 
         }
 
-    });
+    }
 
-});
+    proveriPoljaZaContact(imeIPrezimeContact, imeIPrezimeContactRegex, greskaImeIPrezimeContact);
 
-// Funkcije
+    proveriPoljaZaContact(porukaContact, porukaContactRegex, greskaPorukaContact);
 
-function printMenu(data) {
+    console.log(greskaContactNiz.length);
 
-    let printer = '';
+    if (greskaContactNiz.length == 0) {
 
-    let allTheMenusCollection = document.getElementsByClassName('menu');
-
-    let allTheMenus = Array.from(allTheMenusCollection);
-
-    for (let el of allTheMenus) {
-
-        for (let link of data) {
-
-            printer += `<li><a href="${link.putanja}">${link.naziv}</a></li>`;
-
-        }
-
-        el.innerHTML = printer;
-
-        printer = '';
+        // Salji Ajax Jankeli
 
     }
 
 }
 
-// Prikaz logoa svuda gde je ta klasa postavljena
+function printPlans(data) {
 
-let logosCollection = document.getElementsByClassName('allLogos');
+    let print = '';
 
-let logos = Array.from(logosCollection);
+    for (let el of data) {
 
-for (let el of logos) {
+        if (el.specialPlan) {
 
-    el.innerHTML = ` <a href="#!" class='logoImage'><img src="assets/images/milosLogo.png" alt="Logo" class='img-fluid' /></a>`;
+            print += `<div class="col-lg-4 colPlanIshrane colSpecialPlan">
+
+            <h3>BEST SELLER</h3>
+
+            <div class="planBox planIshraneITreninga">`;
+
+            if (el.slika != '') {
+
+                print += `<div class="planPictureHolder">
+
+                <!-- <img src="assets/images/${el.slika}" class='img-fluid' alt="${el.imePlana}" /> -->
+
+            </div>`
+
+            }
+
+            print += `<div class="aboutPlan">
+
+                    <h3>${el.imePlana}</h3>
+
+                    <p>Cena plana<br><span>${el.cena}&euro;</span></p>
+
+                    <a href="#!" class='orderPlanButton' data-idPlana="${el.id}">Naruči Plan</a>
+
+                </div>
+
+            </div>
+
+        </div>`;
+
+        }
+
+        else {
+
+            print += `<div class="col-lg-4 colPlanIshrane">
+
+            <div class="planBox">
+
+                <div class="planPictureHolder">
+
+                    <img src="assets/images/${el.slika}" class='img-fluid' alt="${el.imePlana}" />
+
+                </div>
+
+                <div class="aboutPlan">
+
+                    <h3>${el.imePlana}</h3>
+
+                    <p>Cena plana<br><span>${el.cena}&euro;</span></p>
+
+                    <a href="#!" class='orderPlanButton' data-idPlana="${el.id}">Naruči Plan</a>
+
+                </div>
+
+            </div>
+
+        </div>`;
+
+        }
+
+    }
+
+    document.querySelector('.rowPlans').innerHTML = print;
 
 }

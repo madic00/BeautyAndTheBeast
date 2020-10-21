@@ -21,6 +21,41 @@ html body {
   overflow: hidden;
 }
 
+html body .goTop {
+  position: fixed;
+  z-index: 1004;
+  bottom: 4%;
+  right: 3%;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+@media (max-width: 576px) {
+  html body .goTop {
+    bottom: 2%;
+  }
+}
+
+html body .goTop i {
+  color: tomato;
+  font-size: 2.4em;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+html body .goTop i:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  color: #ff8e7a;
+}
+
+html body .goTop1 {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
 html body .ytButton {
   position: fixed;
   right: 2%;
@@ -30,11 +65,35 @@ html body .ytButton {
   transition: .6s;
 }
 
+@media (max-width: 1200px) {
+  html body .ytButton {
+    right: 1%;
+  }
+}
+
+@media (max-width: 992px) {
+  html body .ytButton {
+    right: 2%;
+  }
+}
+
 html body .ytButton i {
   font-size: 2.4em;
   color: tomato;
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+@media (max-width: 1200px) {
+  html body .ytButton i {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 992px) {
+  html body .ytButton i {
+    font-size: 2.4em;
+  }
 }
 
 html body .ytButton i:hover {
@@ -45,7 +104,7 @@ html body .preloader {
   width: 100%;
   height: 100vh;
   position: fixed;
-  z-index: 1005 !important;
+  z-index: 1007 !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,6 +143,12 @@ html body nav {
   transition: .6s;
 }
 
+@media (max-width: 992px) {
+  html body nav {
+    display: none;
+  }
+}
+
 html body nav .logoNav {
   width: 25%;
   display: -webkit-box;
@@ -109,6 +174,12 @@ html body nav .menuNav {
   width: 55%;
 }
 
+@media (max-width: 1200px) {
+  html body nav .menuNav {
+    width: 50%;
+  }
+}
+
 html body nav .menuNav .mainMenu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -122,6 +193,14 @@ html body nav .menuNav .mainMenu {
       justify-content: space-around;
 }
 
+@media (max-width: 1200px) {
+  html body nav .menuNav .mainMenu {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 html body nav .menuNav .mainMenu li a {
   color: whitesmoke;
   text-decoration: none;
@@ -131,6 +210,12 @@ html body nav .menuNav .mainMenu li a {
   transition: .6s;
   letter-spacing: 2.5px;
   font-family: "Work Sans", sans-serif;
+}
+
+@media (max-width: 1200px) {
+  html body nav .menuNav .mainMenu li a {
+    font-size: 1em;
+  }
 }
 
 html body nav .menuNav .mainMenu li a:hover {
@@ -177,7 +262,7 @@ html body nav .menuNav .mainMenu li a:hover {
 
 html body #triggerSideNav {
   position: fixed;
-  z-index: 1004;
+  z-index: 1005;
   top: 3%;
   left: 5%;
   font-size: 2em;
@@ -185,6 +270,12 @@ html body #triggerSideNav {
   -webkit-transition: .2s;
   transition: .2s;
   display: none;
+}
+
+@media (max-width: 992px) {
+  html body #triggerSideNav {
+    display: block;
+  }
 }
 
 html body #triggerSideNav:hover {
@@ -208,7 +299,7 @@ html body .sideNav {
   bottom: 0%;
   width: 100%;
   background-color: #141414;
-  z-index: 1003;
+  z-index: 1004;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -341,6 +432,14 @@ html body main .fader .infoMain {
   text-align: center;
 }
 
+@media (max-width: 992px) {
+  html body main .fader .infoMain {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 html body main .fader .infoMain .infoBlock {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -421,6 +520,12 @@ html body .specialSection .rowSpec .colKoSamJa1 {
   padding: 0px;
 }
 
+@media (max-width: 992px) {
+  html body .specialSection .rowSpec .colKoSamJa1 {
+    margin-bottom: 10%;
+  }
+}
+
 html body .specialSection .rowSpec .colKoSamJa1::before {
   content: '';
   position: absolute;
@@ -462,12 +567,36 @@ html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo h2 {
   text-align: center;
 }
 
+@media (max-width: 576px) {
+  html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo h2 {
+    font-size: 2.3em;
+  }
+}
+
+@media (max-width: 386px) {
+  html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo h2 {
+    font-size: 1.9em;
+  }
+}
+
 html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo p {
   letter-spacing: 2.5px;
   color: whitesmoke;
   padding-top: 9%;
   line-height: 35px;
   text-align: justify;
+}
+
+@media (max-width: 992px) {
+  html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo p {
+    padding-top: 5%;
+  }
+}
+
+@media (max-width: 386px) {
+  html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo p {
+    font-size: .9em;
+  }
 }
 
 html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo #rezultatiKlijenata {
@@ -483,6 +612,18 @@ html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo #rezultatiKlijenata
   line-height: 4em;
   color: tomato;
   letter-spacing: 2.2px;
+}
+
+@media (max-width: 1200px) {
+  html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo #rezultatiKlijenata {
+    width: 65%;
+  }
+}
+
+@media (max-width: 386px) {
+  html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo #rezultatiKlijenata {
+    width: 85%;
+  }
 }
 
 html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo #rezultatiKlijenata:hover, html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo #rezultatiKlijenata:focus {
@@ -528,7 +669,7 @@ html body .specialSection .rowSpec .colZastoBasJa2::after {
   background-size: 800% 800%;
   -webkit-animation: gradientTomato 2s ease infinite;
           animation: gradientTomato 2s ease infinite;
-  right: 7% !important;
+  right: 6% !important;
 }
 
 html body .specialSection .rowSpec .colKoSamJa2 {
@@ -545,6 +686,12 @@ html body .specialSection .rowSpec .colKoSamJa2 .koSamJaSlika {
   width: 80%;
 }
 
+@media (max-width: 992px) {
+  html body .specialSection .rowSpec .colKoSamJa2 .koSamJaSlika {
+    width: 70%;
+  }
+}
+
 html body .specialSection .rowSpec .colKoSamJa2 .koSamJaSlika img {
   max-width: 100%;
   height: auto;
@@ -554,8 +701,31 @@ html body .zastoBasJa {
   background-color: #121212;
 }
 
+html body .zastoBasJa .rowZastoBasJa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 992px) {
+  html body .zastoBasJa .rowZastoBasJa .colZastoBasJa1 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+@media (max-width: 992px) {
+  html body .zastoBasJa .rowZastoBasJa .colZastoBasJa2 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
 html body .plans {
-  padding: 5% 0%;
+  padding: 10% 0%;
+  font-family: "Work Sans", sans-serif;
 }
 
 html body .plans h2 {
@@ -569,6 +739,12 @@ html body .plans h2 {
   -webkit-text-fill-color: transparent;
   text-align: center;
   padding-bottom: 8%;
+}
+
+@media (max-width: 386px) {
+  html body .plans h2 {
+    font-size: 2.2em;
+  }
 }
 
 html body .plans h2 label {
@@ -599,6 +775,123 @@ html body .plans .plansCont .rowPlans .colPlanIshrane {
           align-items: center;
 }
 
+html body .plans .plansCont .rowPlans .colPlanIshrane:last-child > .planBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+html body .plans .plansCont .rowPlans .colPlanIshrane:last-child > .planBox > .planPictureHolder {
+  position: absolute;
+  top: 23%;
+  right: -19% !important;
+}
+
+@media (max-width: 1390px) {
+  html body .plans .plansCont .rowPlans .colPlanIshrane:last-child > .planBox > .planPictureHolder {
+    width: 55%;
+    top: 25%;
+    right: -14% !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  html body .plans .plansCont .rowPlans .colPlanIshrane:last-child > .planBox > .planPictureHolder {
+    width: 50%;
+    top: 30%;
+    right: -14% !important;
+  }
+}
+
+@media (max-width: 992px) {
+  html body .plans .plansCont .rowPlans .colPlanIshrane:last-child > .planBox > .planPictureHolder {
+    width: 40%;
+    top: 20%;
+    right: -4% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .plans .plansCont .rowPlans .colPlanIshrane:last-child > .planBox > .planPictureHolder {
+    width: 45%;
+    top: 25%;
+    right: -8% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .plans .plansCont .rowPlans .colPlanIshrane:last-child > .planBox > .planPictureHolder {
+    top: 30%;
+  }
+}
+
+@media (max-width: 386px) {
+  html body .plans .plansCont .rowPlans .colPlanIshrane:last-child > .planBox > .planPictureHolder {
+    top: 35%;
+    width: 47%;
+  }
+}
+
+html body .plans .plansCont .rowPlans .colPlanIshrane:first-child > .planBox > .planPictureHolder {
+  left: -19%;
+  top: 23%;
+}
+
+@media (max-width: 1390px) {
+  html body .plans .plansCont .rowPlans .colPlanIshrane:first-child > .planBox > .planPictureHolder {
+    width: 55%;
+    top: 25%;
+    left: -14% !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  html body .plans .plansCont .rowPlans .colPlanIshrane:first-child > .planBox > .planPictureHolder {
+    width: 50%;
+    top: 30%;
+    left: -14% !important;
+  }
+}
+
+@media (max-width: 992px) {
+  html body .plans .plansCont .rowPlans .colPlanIshrane:first-child > .planBox > .planPictureHolder {
+    width: 40%;
+    top: 20%;
+    left: -4% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .plans .plansCont .rowPlans .colPlanIshrane:first-child > .planBox > .planPictureHolder {
+    width: 45%;
+    top: 25%;
+    left: -8% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .plans .plansCont .rowPlans .colPlanIshrane:first-child > .planBox > .planPictureHolder {
+    top: 30%;
+  }
+}
+
+@media (max-width: 386px) {
+  html body .plans .plansCont .rowPlans .colPlanIshrane:first-child > .planBox > .planPictureHolder {
+    top: 35%;
+    width: 47%;
+  }
+}
+
 html body .plans .plansCont .rowPlans .colPlanIshrane .planBox {
   width: 90%;
   display: -webkit-box;
@@ -619,6 +912,18 @@ html body .plans .plansCont .rowPlans .colPlanIshrane .planBox {
   transition: .5s;
 }
 
+@media (max-width: 992px) {
+  html body .plans .plansCont .rowPlans .colPlanIshrane .planBox {
+    margin: 7% 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .plans .plansCont .rowPlans .colPlanIshrane .planBox {
+    margin: 9% 0%;
+  }
+}
+
 html body .plans .plansCont .rowPlans .colPlanIshrane .planBox:hover {
   -webkit-box-shadow: -1px 2px 36px 13px tomato;
           box-shadow: -1px 2px 36px 13px tomato;
@@ -629,16 +934,6 @@ html body .plans .plansCont .rowPlans .colPlanIshrane .planBox:hover {
 html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .planPictureHolder {
   position: absolute;
   width: 60%;
-}
-
-html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .planPictureHolder:first-child {
-  left: -19%;
-  top: 23%;
-}
-
-html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .planPictureHolder:last-child {
-  top: 23%;
-  right: -20%;
 }
 
 html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .planPictureHolder img {
@@ -670,11 +965,29 @@ html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .aboutPlan {
   font-family: "Work Sans", sans-serif;
 }
 
+@media (max-width: 1390px) {
+  html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .aboutPlan {
+    width: 60%;
+  }
+}
+
 html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .aboutPlan h3 {
   color: tomato;
   font-size: 1.9em;
   text-align: center;
   letter-spacing: 2px;
+}
+
+@media (max-width: 1200px) {
+  html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .aboutPlan h3 {
+    font-size: 1.9em;
+  }
+}
+
+@media (max-width: 386px) {
+  html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .aboutPlan h3 {
+    font-size: 1.6em;
+  }
 }
 
 html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .aboutPlan p {
@@ -729,6 +1042,12 @@ html body .plans .plansCont .rowPlans .colSpecialPlan {
           animation: gradientTomato 2s ease infinite;
 }
 
+@media (max-width: 576px) {
+  html body .plans .plansCont .rowPlans .colSpecialPlan {
+    padding: 10% 0%;
+  }
+}
+
 html body .plans .plansCont .rowPlans .colSpecialPlan:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
@@ -741,6 +1060,12 @@ html body .plans .plansCont .rowPlans .colSpecialPlan h3 {
   font-size: 2em;
   padding-bottom: 10%;
   letter-spacing: 2px;
+}
+
+@media (max-width: 576px) {
+  html body .plans .plansCont .rowPlans .colSpecialPlan h3 {
+    padding-bottom: 3%;
+  }
 }
 
 html body .plans .plansCont .rowPlans .colSpecialPlan .planIshraneITreninga {
@@ -784,8 +1109,506 @@ html body .plans .plansCont .rowPlans .colPlanTreninga .planTreninga {
           justify-content: flex-start;
 }
 
+html body .contactMe {
+  background-color: #121212;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Work Sans", sans-serif;
+  padding: 10% 0%;
+}
+
+html body .contactMe h2 {
+  color: whitesmoke;
+  font-size: 2.7em;
+  background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
+  background-size: 800% 800%;
+  -webkit-animation: gradientTomato 4s ease infinite;
+          animation: gradientTomato 4s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  padding-bottom: 8%;
+}
+
+@media (max-width: 576px) {
+  html body .contactMe h2 {
+    font-size: 2.3em;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .contactMe h2 {
+    padding-bottom: 13%;
+  }
+}
+
+html body .contactMe h2 label {
+  font-size: 1em;
+  color: #006378;
+  border-bottom: 3px solid tomato;
+  padding-bottom: 4.5%;
+}
+
+html body .contactMe .contactMeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+}
+
+html body .contactMe .contactMeContainer .topPartContact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body .contactMe .contactMeContainer .topPartContact p {
+  color: tomato;
+  font-size: 1.5em;
+}
+
+@media (max-width: 480px) {
+  html body .contactMe .contactMeContainer .topPartContact p {
+    padding-bottom: 5%;
+  }
+}
+
+html body .contactMe .contactMeContainer .topPartContact .instagramInfo p #igName {
+  text-decoration: none;
+  color: orange;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+html body .contactMe .contactMeContainer .topPartContact .instagramInfo p #igName:hover {
+  color: #ffd689;
+}
+
+html body .contactMe .contactMeContainer .topPartContact .instagramInfo p #igIcon {
+  text-decoration: none;
+  -webkit-transition: .6s;
+  transition: .6s;
+  width: auto;
+}
+
+html body .contactMe .contactMeContainer .topPartContact .instagramInfo p #igIcon i {
+  color: #c800c8;
+  font-size: 1.4em;
+  vertical-align: middle;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+html body .contactMe .contactMeContainer .topPartContact .instagramInfo p #igIcon i:hover {
+  color: #f293f2;
+}
+
+html body .contactMe .contactMeContainer #midPartContact {
+  color: whitesmoke;
+  font-size: 2em;
+  letter-spacing: 2px;
+  padding: 1% 0%;
+}
+
+@media (max-width: 992px) {
+  html body .contactMe .contactMeContainer #midPartContact {
+    padding: 3% 0%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .contactMe .contactMeContainer #midPartContact {
+    padding: 1% 0% 3% 0%;
+  }
+}
+
+html body .contactMe .contactMeContainer .bottomPartContact {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body .contactMe .contactMeContainer .bottomPartContact p {
+  color: #fbb023;
+  font-size: 2em;
+  padding-bottom: 2.5%;
+}
+
+@media (max-width: 576px) {
+  html body .contactMe .contactMeContainer .bottomPartContact p {
+    padding-bottom: 7%;
+  }
+}
+
+html body .contactMe .contactMeContainer .bottomPartContact .contactFormErrorPar {
+  color: tomato;
+  text-align: center;
+  font-size: 1.3em;
+  padding-top: 2%;
+  letter-spacing: 1.2px;
+  line-height: 1.8em;
+  display: none;
+}
+
+@media (max-width: 480px) {
+  html body .contactMe .contactMeContainer .bottomPartContact .contactFormErrorPar {
+    font-size: 1.1em;
+  }
+}
+
+html body .contactMe .contactMeContainer .bottomPartContact .formField {
+  width: 40%;
+  background-color: transparent;
+  border: 2px solid tomato;
+  color: tomato;
+  border-radius: 6px;
+  resize: none;
+  padding: 1%;
+  margin: .5% 0%;
+}
+
+@media (max-width: 992px) {
+  html body .contactMe .contactMeContainer .bottomPartContact .formField {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .contactMe .contactMeContainer .bottomPartContact .formField {
+    width: 85%;
+    padding: 2%;
+  }
+}
+
+html body .contactMe .contactMeContainer .bottomPartContact .formField::-webkit-input-placeholder {
+  color: whitesmoke;
+}
+
+html body .contactMe .contactMeContainer .bottomPartContact .formField:-ms-input-placeholder {
+  color: whitesmoke;
+}
+
+html body .contactMe .contactMeContainer .bottomPartContact .formField::-ms-input-placeholder {
+  color: whitesmoke;
+}
+
+html body .contactMe .contactMeContainer .bottomPartContact .formField::placeholder {
+  color: whitesmoke;
+}
+
+html body .contactMe .contactMeContainer .bottomPartContact #posaljiPitanje {
+  background-color: tomato;
+  border-radius: 6px;
+  border: 2px solid tomato;
+  color: whitesmoke;
+  width: 20%;
+  line-height: 3.4em;
+  outline: none;
+  letter-spacing: 1.5px;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+@media (max-width: 992px) {
+  html body .contactMe .contactMeContainer .bottomPartContact #posaljiPitanje {
+    width: 35%;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .contactMe .contactMeContainer .bottomPartContact #posaljiPitanje {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .contactMe .contactMeContainer .bottomPartContact #posaljiPitanje {
+    width: 60%;
+  }
+}
+
+@media (max-width: 386px) {
+  html body .contactMe .contactMeContainer .bottomPartContact #posaljiPitanje {
+    width: 70%;
+  }
+}
+
+html body .contactMe .contactMeContainer .bottomPartContact #posaljiPitanje:hover, html body .contactMe .contactMeContainer .bottomPartContact #posaljiPitanje:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  -webkit-box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+          box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+  background-color: #ff7961;
+  border: 2px solid #ff7961;
+}
+
+html body footer {
+  background-color: #141414;
+  padding: 10% 0%;
+  font-family: "Work Sans", sans-serif;
+}
+
+html body footer .rowFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html body footer .rowFooter .colSocialsFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 992px) {
+  html body footer .rowFooter .colSocialsFooter {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin: 7% 0%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body footer .rowFooter .colSocialsFooter {
+    margin: 10% 0%;
+  }
+}
+
+html body footer .rowFooter .colSocialsFooter .socialsFooter p {
+  color: orange;
+  font-size: 1.7em;
+  letter-spacing: 1.7px;
+}
+
+html body footer .rowFooter .colSocialsFooter .socialsFooter .socialsIcons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body footer .rowFooter .colSocialsFooter .socialsFooter .socialsIcons a {
+  text-decoration: none;
+}
+
+html body footer .rowFooter .colSocialsFooter .socialsFooter .socialsIcons a:first-child {
+  color: #b329b3;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+html body footer .rowFooter .colSocialsFooter .socialsFooter .socialsIcons a:first-child:hover {
+  color: #d751d7;
+}
+
+html body footer .rowFooter .colSocialsFooter .socialsFooter .socialsIcons a:last-child {
+  color: tomato;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+html body footer .rowFooter .colSocialsFooter .socialsFooter .socialsIcons a:last-child:hover {
+  color: #fa2600;
+}
+
+html body footer .rowFooter .colSocialsFooter .socialsFooter .socialsIcons a i {
+  font-size: 1.9em;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+@media (max-width: 992px) {
+  html body footer .rowFooter .colSocialsFooter .socialsFooter .socialsIcons a i {
+    font-size: 2.2em;
+  }
+}
+
+html body footer .rowFooter .colSocialsNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 992px) {
+  html body footer .rowFooter .colSocialsNav {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+html body footer .rowFooter .colSocialsNav p {
+  color: tomato;
+  font-size: 1.7em;
+  letter-spacing: 1.8px;
+}
+
+html body footer .rowFooter .colSocialsNav .footerNav ul {
+  text-align: center;
+  list-style-type: none;
+}
+
+html body footer .rowFooter .colSocialsNav .footerNav ul li {
+  margin: 10px 0px;
+}
+
+@media (max-width: 992px) {
+  html body footer .rowFooter .colSocialsNav .footerNav ul li {
+    margin: 15px 0px;
+  }
+}
+
+html body footer .rowFooter .colSocialsNav .footerNav ul li a {
+  color: whitesmoke;
+  letter-spacing: 2px;
+  font-size: 1.4em;
+  text-decoration: none;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+@media (max-width: 480px) {
+  html body footer .rowFooter .colSocialsNav .footerNav ul li a {
+    font-size: 1.1em;
+  }
+}
+
+html body footer .rowFooter .colSocialsNav .footerNav ul li a:hover {
+  color: orangered;
+}
+
+html body footer .rowFooter .colLogoFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 992px) {
+  html body footer .rowFooter .colLogoFooter {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+html body footer .rowFooter .colLogoFooter .logoFooter {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body footer .rowFooter .colLogoFooter .logoFooter .allLogos {
+  width: 40%;
+}
+
+html body footer .rowFooter .colLogoFooter .logoFooter .allLogos img {
+  max-width: 100%;
+  height: auto;
+}
+
+html body footer .rowFooter .colLogoFooter .logoFooter p {
+  color: whitesmoke;
+  padding-top: 8%;
+}
+
 html .vert {
   overflow-y: auto;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 tomato;
+            box-shadow: 0 0 0 0 tomato;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 tomato;
+            box-shadow: 0 0 0 0 tomato;
+  }
 }
 
 @-webkit-keyframes showMe {

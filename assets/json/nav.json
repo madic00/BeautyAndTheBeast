@@ -2,7 +2,7 @@
     {
         "id": 1,
         "naziv": "Početna",
-        "putanja": "#!"
+        "putanja": "index.html#goTopMain"
     },
     {
         "id": 2,
@@ -12,7 +12,7 @@
     {
         "id": 3,
         "naziv": "Planovi",
-        "putanja": "#!"
+        "putanja": "index.html#goTopPlans"
     },
     {
         "id": 4,
@@ -22,6 +22,6 @@
     {
         "id": 5,
         "naziv": "Kontakt",
-        "putanja": "#!"
+        "putanja": "index.html#goTopContact"
     }
 ]
