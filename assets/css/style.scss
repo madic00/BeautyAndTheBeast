@@ -84,6 +84,19 @@ html,body
     overflow-x: hidden; 
 }
 
+.transition-fade{
+
+    opacity : 1;
+    transition : .5s;
+
+}
+
+html.is-animating .transition-fade{
+
+    opacity : 0;
+
+}
+
 html{
 
     scroll-behavior: smooth;
@@ -530,7 +543,7 @@ html{
                             width : 60%;
                             opacity: 0;
                             animation:showMe 2.6s;
-                            animation-delay:5s;
+                            animation-delay: 1s;
                             animation-fill-mode: forwards;
 
                         }
@@ -549,7 +562,7 @@ html{
                             letter-spacing: 2px;
                             opacity: 0;
                             animation:showMe 2.2s;
-                            animation-delay:6s;
+                            animation-delay: 2s;
                             animation-fill-mode: forwards;
 
 
@@ -1011,11 +1024,20 @@ html{
 
                             }
 
+                            &:hover > .planPictureHolder > img{
+
+                                transform : scale(1.05)
+
+                            }
+
 
                             .planPictureHolder{
 
                                 position: absolute;
                                 width : 60%;
+                                overflow: hidden;
+                                border : 3px solid tomato;
+                                border-radius: 12px;
 
                                 img{
 
@@ -1023,8 +1045,8 @@ html{
                                     max-width: 100%;
                                     height: auto;
                                     border-radius: 12px;
-                                    border : 3px solid tomato;
                                     transition: .5s;
+                                    overflow: hidden;
 
                                 }
 

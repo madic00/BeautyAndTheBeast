@@ -32,40 +32,6 @@
 
 <body>
 
-    <!-- Go to top strelica -->
-
-    <a href="#!" class='goTop'>
-
-        <i class="fas fa-chevron-up"></i>
-
-    </a>
-
-    <!-- Youtube button -->
-
-    <a href="https://www.youtube.com/channel/UC-QIbqxqc3HUu2piUkplyyw" target="_blank" class='ytButton'><i
-            class="fab fa-youtube"></i></a>
-
-    <!-- Preload -->
-
-    <div class="preloader">
-
-        <video id='playMeNow' src="assets/videos/preloadVideoNew.mp4" autoplay muted
-            onloadedmetadata="this.muted = true" playsinline type="	
-video/mp4">
-
-            <!-- <source src="assets/videos/preloadVideoNew.mp4" type="video/mp4" /> -->
-            <!-- <source src="assets/videos/preloadVideo.ogg" type="video/ogg" />
-            <source src="assets/videos/preloadVideo.webm" type="video/webm" /> -->
-            <!-- Your browser does not support the video tag. -->
-
-        </video>
-
-        <script>
-            document.getElementById('playMeNow').play();
-        </script>
-
-    </div>
-
     <!-- Main navigacija -->
 
     <nav>
@@ -98,6 +64,39 @@ video/mp4">
         <div class="allLogos logoSideNav"></div>
 
     </div>
+
+    <!-- Preload -->
+
+    <div class="preloader">
+
+        <video id='playMeNow' src="assets/videos/preloadVideoNew.mp4" autoplay muted
+            onloadedmetadata="this.muted = true" playsinline>
+
+            <!-- <source src="assets/videos/preloadVideoNew.mp4" type="video/mp4" /> -->
+            <!-- <source src="assets/videos/preloadVideo.ogg" type="video/ogg" />
+        <source src="assets/videos/preloadVideo.webm" type="video/webm" /> -->
+            <!-- Your browser does not support the video tag. -->
+
+        </video>
+
+        <script>
+            document.getElementById('playMeNow').play();
+        </script>
+
+    </div>
+
+    <!-- Go to top strelica -->
+
+    <a href="#!" class='goTop'>
+
+        <i class="fas fa-chevron-up"></i>
+
+    </a>
+
+    <!-- Youtube button -->
+
+    <a href="https://www.youtube.com/channel/UC-QIbqxqc3HUu2piUkplyyw" target="_blank" class='ytButton'><i
+            class="fab fa-youtube"></i></a>
 
     <!-- Main sekcija -->
 
@@ -133,9 +132,11 @@ video/mp4">
 
                     <h2>Ko Sam Ja ? </h2>
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quae numquam, animi itaque ullam
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quae numquam, animi itaque
+                        ullam
                         hic
-                        eos sed vitae accusantium minima qui magnam. Libero consequuntur eum amet, beatae dolorem eos
+                        eos sed vitae accusantium minima qui magnam. Libero consequuntur eum amet, beatae dolorem
+                        eos
                         aut.
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam iusto est esse nobis cum quia
                         cupiditate alias, beatae magni aperiam ipsa eveniet ratione earum magnam expedita officiis
@@ -169,8 +170,8 @@ video/mp4">
 
             <div class="col-lg-6 colZastoBasJa1">
 
-                <video id='videoZastoBasJa' autoplay muted src="assets/videos/workoutVideoNew.mp4" loop playsinline type="	
-video/mp4"></video>
+                <video id='videoZastoBasJa' autoplay muted src="assets/videos/workoutVideoNew.mp4" loop
+                    playsinline></video>
 
             </div>
 
@@ -180,10 +181,13 @@ video/mp4"></video>
 
                     <h2>Zašto Baš Ja ?</h2>
 
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, odio doloremque perferendis qui
-                        ut iste illum vero recusandae ipsa, molestiae earum veritatis quae illo ratione sint excepturi
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos, odio doloremque perferendis
+                        qui
+                        ut iste illum vero recusandae ipsa, molestiae earum veritatis quae illo ratione sint
+                        excepturi
                         consequatur a repellendus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam
-                        blanditiis ratione culpa enim voluptatum voluptatibus. Voluptatum at, veritatis sed tempore iure
+                        blanditiis ratione culpa enim voluptatum voluptatibus. Voluptatum at, veritatis sed tempore
+                        iure
                         amet, minima numquam cupiditate voluptatem cum accusamus aspernatur voluptatibus?</p>
 
                     <a href="#!" id='rezultatiKlijenata'>Rezultati Klijenata</a>
@@ -317,7 +321,8 @@ video/mp4"></video>
                 <input type="text" id='imePrezimeContact' class="formField" name="fullName"
                     placeholder="Vaše ime i prezime ..." />
 
-                <p id='firstLastNameContactError' class="contactFormErrorPar">Ime i prezime nije dobro uneto. <br>Primer
+                <p id='firstLastNameContactError' class="contactFormErrorPar">Ime i prezime nije dobro uneto.
+                    <br>Primer
                     pravilno unetog imena i
                     prezimena : Jasmina Lukić, Nikola Hadzi Ristić, ...</p>
 
@@ -326,7 +331,8 @@ video/mp4"></video>
                 <textarea placeholder="Vaše pitanje ..." class="formField" name="questionForMilos" id="pitanjeZaMilosa"
                     cols="30" rows="10"></textarea>
 
-                <p id='sendMessageContactError' class="contactFormErrorPar">Morate napisati barem karaktera u polju za
+                <p id='sendMessageContactError' class="contactFormErrorPar">Morate napisati barem karaktera u polju
+                    za
                     pitanje.
                 </p>
 
@@ -412,6 +418,7 @@ video/mp4"></video>
 
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/mainPage.js"></script>
+    <script src="assets/js/preloader.js"></script>
 
 </body>
 

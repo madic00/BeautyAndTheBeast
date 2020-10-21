@@ -10,6 +10,16 @@ html, body {
   overflow-x: hidden;
 }
 
+.transition-fade {
+  opacity: 1;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
 html {
   scroll-behavior: smooth;
   width: 100%;
@@ -461,8 +471,8 @@ html body main .fader .infoMain .infoBlock img {
   opacity: 0;
   -webkit-animation: showMe 2.6s;
           animation: showMe 2.6s;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -482,8 +492,8 @@ html body main .fader .infoMain .infoBlock a {
   opacity: 0;
   -webkit-animation: showMe 2.2s;
           animation: showMe 2.2s;
-  -webkit-animation-delay: 6s;
-          animation-delay: 6s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -931,9 +941,17 @@ html body .plans .plansCont .rowPlans .colPlanIshrane .planBox:hover {
           transform: scale(1.05);
 }
 
+html body .plans .plansCont .rowPlans .colPlanIshrane .planBox:hover > .planPictureHolder > img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .planPictureHolder {
   position: absolute;
   width: 60%;
+  overflow: hidden;
+  border: 3px solid tomato;
+  border-radius: 12px;
 }
 
 html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .planPictureHolder img {
@@ -941,9 +959,9 @@ html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .planPictureHolde
   max-width: 100%;
   height: auto;
   border-radius: 12px;
-  border: 3px solid tomato;
   -webkit-transition: .5s;
   transition: .5s;
+  overflow: hidden;
 }
 
 html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .aboutPlan {
