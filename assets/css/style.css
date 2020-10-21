@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 * {
   padding: 0px;
   margin: 0px;
@@ -34,10 +27,8 @@ html body .goTop {
   bottom: 4%;
   right: 3%;
   -webkit-transform: translateY(200px);
-          -ms-transform: translateY(200px);
-      transform: translateY(200px);
+          transform: translateY(200px);
   -webkit-transition: .6s;
-  -o-transition: .6s;
   transition: .6s;
 }
 
@@ -51,21 +42,18 @@ html body .goTop i {
   color: tomato;
   font-size: 2.4em;
   -webkit-transition: .6s;
-  -o-transition: .6s;
   transition: .6s;
 }
 
 html body .goTop i:hover {
   -webkit-transform: translateY(-10px);
-          -ms-transform: translateY(-10px);
-      transform: translateY(-10px);
+          transform: translateY(-10px);
   color: #ff8e7a;
 }
 
 html body .goTop1 {
   -webkit-transform: translateY(0px);
-          -ms-transform: translateY(0px);
-      transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 html body .ytButton {
@@ -74,7 +62,6 @@ html body .ytButton {
   top: 6.5%;
   z-index: 1000;
   -webkit-transition: .6s;
-  -o-transition: .6s;
   transition: .6s;
 }
 
@@ -94,7 +81,6 @@ html body .ytButton i {
   font-size: 2.4em;
   color: tomato;
   -webkit-transition: .5s;
-  -o-transition: .5s;
   transition: .5s;
 }
 
@@ -154,7 +140,6 @@ html body nav {
   z-index: 999;
   padding: 0.5% 0%;
   -webkit-transition: .6s;
-  -o-transition: .6s;
   transition: .6s;
 }
 
@@ -182,7 +167,6 @@ html body nav .logoNav .logoImage img {
   max-width: 100%;
   height: auto;
   -webkit-transition: .6s;
-  -o-transition: .6s;
   transition: .6s;
 }
 
@@ -223,7 +207,6 @@ html body nav .menuNav .mainMenu li a {
   font-size: 1.2em;
   position: relative;
   -webkit-transition: .6s;
-  -o-transition: .6s;
   transition: .6s;
   letter-spacing: 2.5px;
   font-family: "Work Sans", sans-serif;
@@ -245,7 +228,6 @@ html body nav .menuNav .mainMenu li a:before, html body nav .menuNav .mainMenu l
   position: absolute;
   content: '';
   -webkit-transition: all 0.35s ease;
-  -o-transition: all 0.35s ease;
   transition: all 0.35s ease;
   opacity: 0;
 }
@@ -256,8 +238,7 @@ html body nav .menuNav .mainMenu li a:before {
   border-left: 3px solid tomato;
   border-top: 3px solid tomato;
   -webkit-transform: translate(100%, 50%);
-          -ms-transform: translate(100%, 50%);
-      transform: translate(100%, 50%);
+          transform: translate(100%, 50%);
 }
 
 html body nav .menuNav .mainMenu li a:after {
@@ -266,14 +247,12 @@ html body nav .menuNav .mainMenu li a:after {
   border-right: 3px solid tomato;
   border-bottom: 3px solid tomato;
   -webkit-transform: translate(-100%, -50%);
-          -ms-transform: translate(-100%, -50%);
-      transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
 }
 
 html body nav .menuNav .mainMenu li a:hover:before, html body nav .menuNav .mainMenu li a:hover:after {
   -webkit-transform: translate(0%, 0%);
-          -ms-transform: translate(0%, 0%);
-      transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
   opacity: 1;
 }
 
@@ -289,7 +268,6 @@ html body #triggerSideNav {
   font-size: 2em;
   text-decoration: none;
   -webkit-transition: .2s;
-  -o-transition: .2s;
   transition: .2s;
   display: none;
 }
@@ -302,8 +280,7 @@ html body #triggerSideNav {
 
 html body #triggerSideNav:hover {
   -webkit-transform: translateY(10%);
-          -ms-transform: translateY(10%);
-      transform: translateY(10%);
+          transform: translateY(10%);
 }
 
 html body #triggerSideNav:hover > i {
@@ -313,7 +290,6 @@ html body #triggerSideNav:hover > i {
 html body #triggerSideNav i {
   color: tomato;
   -webkit-transition: .2s;
-  -o-transition: .2s;
   transition: .2s;
 }
 
@@ -337,10 +313,8 @@ html body .sideNav {
       -ms-flex-align: center;
           align-items: center;
   -webkit-transform: translateY(-1500px);
-          -ms-transform: translateY(-1500px);
-      transform: translateY(-1500px);
+          transform: translateY(-1500px);
   -webkit-transition: 1.4s;
-  -o-transition: 1.4s;
   transition: 1.4s;
 }
 
@@ -374,25 +348,20 @@ html body .sideNav .sideMenu li a:after {
   left: 0;
   background-color: tomato;
   -webkit-transform: scaleX(0);
-          -ms-transform: scaleX(0);
-      transform: scaleX(0);
+          transform: scaleX(0);
   -webkit-transform-origin: bottom right;
-          -ms-transform-origin: bottom right;
-      transform-origin: bottom right;
+          transform-origin: bottom right;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
-  -o-transition: transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 html body .sideNav .sideMenu li a:hover:after {
   -webkit-transform-origin: bottom left;
-          -ms-transform-origin: bottom left;
-      transform-origin: bottom left;
+          transform-origin: bottom left;
   -webkit-transform: scaleX(1);
-          -ms-transform: scaleX(1);
-      transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 html body .sideNav .logoSideNav a {
@@ -415,8 +384,7 @@ html body .sideNav .logoSideNav a img {
 
 html body .sideNav1 {
   -webkit-transform: translateY(0px);
-          -ms-transform: translateY(0px);
-      transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 html body main {
@@ -501,7 +469,6 @@ html body main .fader .infoMain .infoBlock img {
 
 html body main .fader .infoMain .infoBlock a {
   -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
   transition: 0.5s;
   border-radius: 12px;
   text-decoration: none;
@@ -564,7 +531,6 @@ html body .specialSection .rowSpec .colKoSamJa1::before {
   position: absolute;
   width: 4px;
   height: 100%;
-  background: -o-linear-gradient(142deg, #e85d46, #f24124, #f55238, #f3600c);
   background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c);
   background-size: 800% 800%;
   -webkit-animation: gradientTomato 2s ease infinite;
@@ -592,7 +558,6 @@ html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo {
 html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo h2 {
   color: whitesmoke;
   font-size: 2.7em;
-  background: -o-linear-gradient(142deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
   background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
   background-size: 800% 800%;
   -webkit-animation: gradientTomato 4s ease infinite;
@@ -637,7 +602,6 @@ html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo p {
 html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo #rezultatiKlijenata {
   margin: 7% auto;
   -webkit-transition: .5s;
-  -o-transition: .5s;
   transition: .5s;
   border-radius: 6px;
   text-decoration: none;
@@ -666,8 +630,7 @@ html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo #rezultatiKlijenata
   -webkit-box-shadow: 0 0.7em 0.7em -0.4em #eb5527;
           box-shadow: 0 0.7em 0.7em -0.4em #eb5527;
   -webkit-transform: translateY(-0.25em);
-          -ms-transform: translateY(-0.25em);
-      transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
   color: whitesmoke;
   background-color: tomato;
 }
@@ -702,7 +665,6 @@ html body .specialSection .rowSpec .colZastoBasJa2::after {
   position: absolute;
   width: 4px;
   height: 100%;
-  background: -o-linear-gradient(142deg, #e85d46, #f24124, #f55238, #f3600c);
   background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c);
   background-size: 800% 800%;
   -webkit-animation: gradientTomato 2s ease infinite;
@@ -769,7 +731,6 @@ html body .plans {
 html body .plans h2 {
   color: whitesmoke;
   font-size: 2.7em;
-  background: -o-linear-gradient(142deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
   background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
   background-size: 800% 800%;
   -webkit-animation: gradientTomato 4s ease infinite;
@@ -948,7 +909,6 @@ html body .plans .plansCont .rowPlans .colPlanIshrane .planBox {
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-transition: .5s;
-  -o-transition: .5s;
   transition: .5s;
 }
 
@@ -968,8 +928,7 @@ html body .plans .plansCont .rowPlans .colPlanIshrane .planBox:hover {
   -webkit-box-shadow: -1px 2px 36px 13px tomato;
           box-shadow: -1px 2px 36px 13px tomato;
   -webkit-transform: scale(1.05);
-          -ms-transform: scale(1.05);
-      transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .planPictureHolder {
@@ -984,7 +943,6 @@ html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .planPictureHolde
   border-radius: 12px;
   border: 3px solid tomato;
   -webkit-transition: .5s;
-  -o-transition: .5s;
   transition: .5s;
 }
 
@@ -1055,7 +1013,6 @@ html body .plans .plansCont .rowPlans .colPlanIshrane .planBox .aboutPlan .order
   border-radius: 6px;
   letter-spacing: 2px;
   -webkit-transition: .5s;
-  -o-transition: .5s;
   transition: .5s;
 }
 
@@ -1078,9 +1035,7 @@ html body .plans .plansCont .rowPlans .colSpecialPlan {
   border-radius: 12px;
   padding: 5% 0%;
   -webkit-transition: .5s;
-  -o-transition: .5s;
   transition: .5s;
-  background: -o-linear-gradient(82deg, #e85d46, #f24124, #f55238, #f3600c, orangered, tomato, red);
   background: linear-gradient(8deg, #e85d46, #f24124, #f55238, #f3600c, orangered, tomato, red);
   background-size: 800% 800%;
   -webkit-animation: gradientTomato 2s ease infinite;
@@ -1095,8 +1050,7 @@ html body .plans .plansCont .rowPlans .colSpecialPlan {
 
 html body .plans .plansCont .rowPlans .colSpecialPlan:hover {
   -webkit-transform: scale(1.05);
-          -ms-transform: scale(1.05);
-      transform: scale(1.05);
+          transform: scale(1.05);
   -webkit-box-shadow: -1px 2px 36px 13px #f06b1d;
           box-shadow: -1px 2px 36px 13px #f06b1d;
 }
@@ -1136,8 +1090,7 @@ html body .plans .plansCont .rowPlans .colSpecialPlan .planIshraneITreninga:hove
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-transform: scale(1);
-          -ms-transform: scale(1);
-      transform: scale(1);
+          transform: scale(1);
 }
 
 html body .plans .plansCont .rowPlans .colPlanTreninga .planTreninga {
@@ -1178,7 +1131,6 @@ html body .contactMe {
 html body .contactMe h2 {
   color: whitesmoke;
   font-size: 2.7em;
-  background: -o-linear-gradient(142deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
   background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
   background-size: 800% 800%;
   -webkit-animation: gradientTomato 4s ease infinite;
@@ -1257,7 +1209,6 @@ html body .contactMe .contactMeContainer .topPartContact .instagramInfo p #igNam
   text-decoration: none;
   color: orange;
   -webkit-transition: .6s;
-  -o-transition: .6s;
   transition: .6s;
 }
 
@@ -1268,7 +1219,6 @@ html body .contactMe .contactMeContainer .topPartContact .instagramInfo p #igNam
 html body .contactMe .contactMeContainer .topPartContact .instagramInfo p #igIcon {
   text-decoration: none;
   -webkit-transition: .6s;
-  -o-transition: .6s;
   transition: .6s;
   width: auto;
 }
@@ -1278,7 +1228,6 @@ html body .contactMe .contactMeContainer .topPartContact .instagramInfo p #igIco
   font-size: 1.4em;
   vertical-align: middle;
   -webkit-transition: .6s;
-  -o-transition: .6s;
   transition: .6s;
 }
 
@@ -1386,10 +1335,6 @@ html body .contactMe .contactMeContainer .bottomPartContact .formField::-ms-inpu
   color: whitesmoke;
 }
 
-html body .contactMe .contactMeContainer .bottomPartContact .formField::-moz-placeholder {
-  color: whitesmoke;
-}
-
 html body .contactMe .contactMeContainer .bottomPartContact .formField::placeholder {
   color: whitesmoke;
 }
@@ -1404,7 +1349,6 @@ html body .contactMe .contactMeContainer .bottomPartContact #posaljiPitanje {
   outline: none;
   letter-spacing: 1.5px;
   -webkit-transition: .6s;
-  -o-transition: .6s;
   transition: .6s;
 }
 
@@ -1505,7 +1449,6 @@ html body footer .rowFooter .colSocialsFooter .socialsFooter .socialsIcons a {
 html body footer .rowFooter .colSocialsFooter .socialsFooter .socialsIcons a:first-child {
   color: #b329b3;
   -webkit-transition: .3s;
-  -o-transition: .3s;
   transition: .3s;
 }
 
@@ -1516,7 +1459,6 @@ html body footer .rowFooter .colSocialsFooter .socialsFooter .socialsIcons a:fir
 html body footer .rowFooter .colSocialsFooter .socialsFooter .socialsIcons a:last-child {
   color: tomato;
   -webkit-transition: .3s;
-  -o-transition: .3s;
   transition: .3s;
 }
 
@@ -1527,7 +1469,6 @@ html body footer .rowFooter .colSocialsFooter .socialsFooter .socialsIcons a:las
 html body footer .rowFooter .colSocialsFooter .socialsFooter .socialsIcons a i {
   font-size: 1.9em;
   -webkit-transition: .3s;
-  -o-transition: .3s;
   transition: .3s;
 }
 
@@ -1588,7 +1529,6 @@ html body footer .rowFooter .colSocialsNav .footerNav ul li a {
   font-size: 1.4em;
   text-decoration: none;
   -webkit-transition: .6s;
-  -o-transition: .6s;
   transition: .6s;
 }
 
@@ -1734,3 +1674,4 @@ html .vert {
 ::-webkit-scrollbar-thumb:hover {
   background: #ff7961;
 }
+/*# sourceMappingURL=style.css.map */
