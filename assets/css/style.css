@@ -23,12 +23,14 @@ html.is-animating .transition-fade {
 html {
   scroll-behavior: smooth;
   width: 100%;
+  position: relative;
 }
 
 html body {
   width: 100%;
   background-color: #141414;
   overflow: hidden;
+  position: relative;
 }
 
 html body .goTop {
@@ -322,8 +324,8 @@ html body .sideNav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: translateY(-1500px);
-          transform: translateY(-1500px);
+  -webkit-transform: translateY(-3500px);
+          transform: translateY(-3500px);
   -webkit-transition: 1.4s;
   transition: 1.4s;
 }
@@ -1609,6 +1611,214 @@ html body footer .rowFooter .colLogoFooter .logoFooter .allLogos img {
 html body footer .rowFooter .colLogoFooter .logoFooter p {
   color: whitesmoke;
   padding-top: 8%;
+}
+
+html body .blogovi {
+  padding: 20% 0% !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Work Sans", sans-serif;
+  background-color: #171717;
+}
+
+@media (max-width: 576px) {
+  html body .blogovi {
+    padding: 30% 0% !important;
+  }
+}
+
+html body .blogovi .blogBox {
+  width: 23%;
+  height: 400px;
+  position: relative;
+  background-image: url("../images/planTreninga.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  -webkit-transition: .6s;
+  transition: .6s;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin: 2% 0%;
+}
+
+@media (max-width: 1200px) {
+  html body .blogovi .blogBox {
+    width: 26%;
+  }
+}
+
+@media (max-width: 992px) {
+  html body .blogovi .blogBox {
+    width: 35%;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .blogovi .blogBox {
+    width: 40%;
+  }
+}
+
+@media (max-width: 576px) {
+  html body .blogovi .blogBox {
+    width: 80%;
+    margin: 3% 0%;
+  }
+}
+
+@media (max-width: 386px) {
+  html body .blogovi .blogBox {
+    margin: 5% 0%;
+  }
+}
+
+html body .blogovi .blogBox:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-box-shadow: 10px 10px 5px 0px black;
+          box-shadow: 10px 10px 5px 0px black;
+}
+
+html body .blogovi .blogBox:hover > .blogCardInfo {
+  bottom: -30%;
+  background-color: #2e2e2e;
+}
+
+html body .blogovi .blogBox .datumPostavljanjaBloga {
+  position: absolute;
+  left: 3%;
+  top: 3%;
+}
+
+html body .blogovi .blogBox .datumPostavljanjaBloga p {
+  color: whitesmoke;
+}
+
+html body .blogovi .blogBox .blogCardInfo {
+  position: absolute;
+  height: 100%;
+  bottom: -75%;
+  padding: 4%;
+  background-color: #212121;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+html body .blogovi .blogBox .blogCardInfo #autorCardText {
+  color: whitesmoke;
+}
+
+html body .blogovi .blogBox .blogCardInfo h3 {
+  color: orangered;
+  padding-bottom: 5%;
+}
+
+html body .blogovi .blogBox .blogCardInfo #shortIntroCardText {
+  color: whitesmoke;
+}
+
+html body .blogPage {
+  width: 100%;
+  padding: 0px;
+  position: relative;
+}
+
+html body .blogPage .blogPicture {
+  width: 100%;
+  height: 70vh;
+  background-image: url("../images/blogBackground.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+html body .blogPage .blogPicture .blogPictureFade {
+  width: 100%;
+  height: 100%;
+}
+
+html body .blogPage .absoluteBlogBox {
+  font-family: "Work Sans", sans-serif;
+  background-color: #1c1c1c;
+  width: 90%;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 10px 10px 5px 0px black;
+          box-shadow: 10px 10px 5px 0px black;
+  padding: 3%;
+  -webkit-transform: translateY(-5%);
+          transform: translateY(-5%);
+}
+
+@media (max-width: 480px) {
+  html body .blogPage .absoluteBlogBox {
+    -webkit-transform: translateY(-2%);
+            transform: translateY(-2%);
+  }
+}
+
+html body .blogPage .absoluteBlogBox h1 {
+  color: orange;
+  padding: 4% 0%;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  html body .blogPage .absoluteBlogBox h1 {
+    padding: 8% 0%;
+  }
+}
+
+@media (max-width: 576px) {
+  html body .blogPage .absoluteBlogBox h1 {
+    padding: 12% 0%;
+  }
+}
+
+html body .blogPage .absoluteBlogBox p {
+  color: whitesmoke;
+  font-size: 1.2em;
+  line-height: 40px;
+  letter-spacing: 1.6px;
+  text-align: justify;
+  text-shadow: 1.2px 1.2px black;
+}
+
+@media (max-width: 768px) {
+  html body .blogPage .absoluteBlogBox p {
+    font-size: 1.05em;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .blogPage .absoluteBlogBox p {
+    font-size: 1em;
+    text-align: center;
+  }
 }
 
 html .vert {

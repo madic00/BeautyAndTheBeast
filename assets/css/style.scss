@@ -101,12 +101,14 @@ html{
 
     scroll-behavior: smooth;
     width : 100%;
+    position: relative;
 
     body{
 
         width : 100%;
         background-color: #141414;
         overflow: hidden;
+        position: relative;
 
         // Go to top strelica
 
@@ -409,7 +411,7 @@ html{
             flex-direction: $co;
             justify-content: $sa;
             align-items: $c;
-            transform: translateY(-1500px);
+            transform: translateY(-3500px);
             transition: 1.4s;
             
             .sideMenu{
@@ -1693,6 +1695,226 @@ html{
 
                         }
 
+                    }
+
+                }
+
+            }
+
+        }
+
+        // Blogs.html
+
+        .blogovi{
+
+            padding: 20% 0% !important;
+            display: $f;
+            flex-wrap: $fw;
+            justify-content: $sa;
+            align-items: $c;
+            font-family : $font;
+            background-color: lighten(#141414, 1%);
+
+            @include d4{
+
+                padding : 30% 0% !important;
+
+            }
+
+            .blogBox{
+
+                width : 23%;
+                height : 400px;
+                position : relative;
+                background-image: url("../images/planTreninga.jpg");
+                background-position: $c;
+                background-repeat: no-repeat;
+                background-size: cover;
+                overflow: hidden;
+                transition: .6s;
+                box-shadow: none;
+                margin : 2% 0%;
+
+                @include d1{
+
+                    width : 26%;
+
+                }
+
+                @include d2{
+
+                    width : 35%;
+
+                }
+
+                @include d3{
+
+                    width : 40%;
+
+                }
+
+                @include d4{
+
+                    width : 80%;
+                    margin : 3% 0%;
+
+                }
+
+                @include d6{
+
+                    margin : 5% 0%;
+
+                }
+
+                &:hover{
+
+                    transform : scale(1.03);
+                    box-shadow: 10px 10px 5px 0px rgb(0, 0, 0);
+
+                }
+
+                &:hover > .blogCardInfo{
+
+                    bottom : -30%;
+                    background-color: lighten(#141414, 10%);
+
+                }
+                
+                .datumPostavljanjaBloga{
+
+                    position: absolute;
+                    left : 3%;
+                    top : 3%;
+
+                    p{
+
+                        color : whitesmoke;
+
+                    }
+
+                }
+
+                .blogCardInfo{
+
+                    position : absolute;
+                    height : 100%;
+                    bottom : -75%;
+                    padding : 4%;
+                    background-color: lighten(#141414, 5%);
+                    transition: .7s;
+
+                    #autorCardText{
+
+                        color : whitesmoke;
+
+                    }
+
+                    h3{
+
+                        color : orangered;
+                        padding-bottom: 5%;
+
+                    }
+
+                    #shortIntroCardText{
+
+                        color : whitesmoke;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .blogPage{
+
+            width : 100%;
+            padding : 0px;
+            position : relative;
+
+            .blogPicture{
+
+                width : 100%;
+                height: 70vh;
+                background-image: url('../images/blogBackground.jpeg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: $c;
+                background-attachment: fixed;
+
+                .blogPictureFade{
+
+                    width : 100%;
+                    height : 100%;
+
+                }
+
+            }
+
+            .absoluteBlogBox{
+
+                font-family : $font;
+                background-color: lighten(#141414, 3%);
+                width : 90%;
+                border-radius : 12px;
+                display: $f;
+                flex-direction: $co;
+                justify-content: $sa;
+                align-items: $c;
+                box-shadow: 10px 10px 5px 0px rgb(0, 0, 0);
+                padding : 3%;
+                transform: translateY(-5%);
+
+                @include d5{
+
+                    transform: translateY(-2%);
+
+                }
+
+                h1{
+
+                    color : orange;
+                    padding: 4% 0%;
+                    letter-spacing: 2px;
+                    text-align: $c;
+
+                    @include d3{
+
+                        padding : 8% 0%;
+
+                    }
+
+                    @include d4{
+
+                        padding : 12% 0%;
+
+                    }
+
+                }
+
+                p{
+
+                    color : whitesmoke;
+                    font-size : 1.2em;
+                    line-height: 40px;
+                    letter-spacing: 1.6px;
+                    text-align: justify;
+                    text-shadow : 1.2px 1.2px black;
+
+                    @include d3{
+
+                        font-size : 1.05em;
+                        letter-spacing: 2px;
+
+                    }
+
+                    @include d5{
+
+                        font-size : 1em;
+                        text-align: $c;
+    
                     }
 
                 }
