@@ -33,6 +33,31 @@ html body {
   position: relative;
 }
 
+html body .loginRegister {
+  position: absolute;
+  right: 1%;
+  top: .2%;
+  font-family: "Work Sans", sans-serif;
+  z-index: 1005;
+}
+
+html body .loginRegister p {
+  color: orange;
+}
+
+html body .loginRegister p a {
+  color: orange;
+  font-size: 1.15em;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+html body .loginRegister p a:hover {
+  color: tomato;
+}
+
 html body .goTop {
   position: fixed;
   z-index: 1004;
@@ -608,6 +633,12 @@ html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo p {
 @media (max-width: 386px) {
   html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo p {
     font-size: .9em;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .specialSection .rowSpec .colKoSamJa1 .koSamJaInfo p {
+    text-align: center;
   }
 }
 
@@ -1819,6 +1850,656 @@ html body .blogPage .absoluteBlogBox p {
     font-size: 1em;
     text-align: center;
   }
+}
+
+html body .commentSection {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #191919;
+  font-family: "Work Sans", sans-serif;
+  padding: 3% 0%;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  html body .commentSection {
+    padding: 6% 0%;
+  }
+}
+
+@media (max-width: 576px) {
+  html body .commentSection {
+    padding: 10% 0%;
+  }
+}
+
+html body .commentSection h2 {
+  background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
+  background-size: 800% 800%;
+  -webkit-animation: gradientTomato 4s ease infinite;
+          animation: gradientTomato 4s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.3em;
+}
+
+@media (max-width: 992px) {
+  html body .commentSection h2 {
+    padding-bottom: 5%;
+  }
+}
+
+html body .commentSection .postYourComment {
+  width: 70%;
+  background-color: #1e1e1e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3% 0%;
+  padding: 3.5% 0%;
+  border-radius: 9px;
+}
+
+@media (max-width: 992px) {
+  html body .commentSection .postYourComment {
+    width: 90%;
+    padding: 5% 0%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .commentSection .postYourComment {
+    padding: 8% 0%;
+  }
+}
+
+html body .commentSection .postYourComment textarea {
+  resize: none;
+  width: 70%;
+  background-color: transparent;
+  color: whitesmoke;
+  padding: 1.5%;
+  border-radius: 12px;
+  border: 2px solid whitesmoke;
+}
+
+@media (max-width: 768px) {
+  html body .commentSection .postYourComment textarea {
+    width: 85%;
+  }
+}
+
+@media (max-width: 576px) {
+  html body .commentSection .postYourComment textarea {
+    width: 90%;
+    padding: 2%;
+  }
+}
+
+@media (max-width: 386px) {
+  html body .commentSection .postYourComment textarea {
+    width: 100%;
+  }
+}
+
+html body .commentSection .postYourComment textarea::-webkit-input-placeholder {
+  color: whitesmoke;
+}
+
+html body .commentSection .postYourComment textarea:-ms-input-placeholder {
+  color: whitesmoke;
+}
+
+html body .commentSection .postYourComment textarea::-ms-input-placeholder {
+  color: whitesmoke;
+}
+
+html body .commentSection .postYourComment textarea::placeholder {
+  color: whitesmoke;
+}
+
+html body .commentSection .postYourComment #commentErrorPar {
+  color: tomato;
+  padding-top: 5%;
+  letter-spacing: 1.1px;
+  font-size: 1.2em;
+  display: none;
+}
+
+html body .commentSection .postYourComment #postACommentButton {
+  outline: none;
+  margin-top: 5%;
+  width: 30%;
+  line-height: 3em;
+  background-color: tomato;
+  color: whitesmoke;
+  border: none;
+  border-radius: 6px;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+@media (max-width: 992px) {
+  html body .commentSection .postYourComment #postACommentButton {
+    width: 40%;
+  }
+}
+
+@media (max-width: 576px) {
+  html body .commentSection .postYourComment #postACommentButton {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .commentSection .postYourComment #postACommentButton {
+    margin-top: 8%;
+  }
+}
+
+html body .commentSection .postYourComment #postACommentButton:hover {
+  color: tomato;
+  background-color: whitesmoke;
+}
+
+html body .commentSection #nemaKomentara {
+  color: #f3b239;
+  letter-spacing: 1.2px;
+  font-size: 1.4em;
+}
+
+@media (max-width: 768px) {
+  html body .commentSection #nemaKomentara {
+    padding: 5% 0%;
+  }
+}
+
+html body .commentSection #ulogujSeZaKomentar {
+  color: #ffce48;
+  font-size: 1.4em;
+  letter-spacing: 1.2px;
+}
+
+@media (max-width: 768px) {
+  html body .commentSection #ulogujSeZaKomentar {
+    padding: 5% 0%;
+  }
+}
+
+html body .commentSection .komentariIspis {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 4% 0%;
+}
+
+@media (max-width: 1200px) {
+  html body .commentSection .komentariIspis {
+    width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  html body .commentSection .komentariIspis {
+    width: 100%;
+  }
+}
+
+html body .commentSection .komentariIspis .commentBox {
+  width: 80%;
+  background-color: #1e1e1e;
+  padding: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2.5% 0%;
+  border-radius: 12px;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+@media (max-width: 992px) {
+  html body .commentSection .komentariIspis .commentBox {
+    padding: 5% 3%;
+    width: 85%;
+  }
+}
+
+@media (max-width: 576px) {
+  html body .commentSection .komentariIspis .commentBox {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .commentSection .komentariIspis .commentBox {
+    padding: 9% 3%;
+  }
+}
+
+html body .commentSection .komentariIspis .commentBox .topCommentPart {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  html body .commentSection .komentariIspis .commentBox .topCommentPart {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+html body .commentSection .komentariIspis .commentBox .topCommentPart p {
+  margin-bottom: 0px;
+  color: tomato;
+  font-size: 1.1em;
+  letter-spacing: 1.2px;
+}
+
+html body .commentSection .komentariIspis .commentBox .middleCommentPart {
+  margin: 5% 0%;
+  letter-spacing: 1.2px;
+  color: whitesmoke;
+  text-shadow: 1.3px 1.3px #000;
+  line-height: 36px;
+}
+
+@media (max-width: 576px) {
+  html body .commentSection .komentariIspis .commentBox .middleCommentPart {
+    margin: 7% 0%;
+  }
+}
+
+html body .commentSection .komentariIspis .commentBox .botCommentPart {
+  margin-bottom: 3%;
+  width: 100%;
+}
+
+html body .commentSection .komentariIspis .commentBox .botCommentPart #odgovorNaKomentar {
+  width: 35%;
+  line-height: 3.2em;
+  background-color: tomato;
+  border: none;
+  border-radius: 6px;
+  color: whitesmoke;
+  -webkit-transition: .6s;
+  transition: .6s;
+  outline: none;
+}
+
+@media (max-width: 992px) {
+  html body .commentSection .komentariIspis .commentBox .botCommentPart #odgovorNaKomentar {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .commentSection .komentariIspis .commentBox .botCommentPart #odgovorNaKomentar {
+    width: 70%;
+  }
+}
+
+html body .commentSection .komentariIspis .commentBox .botCommentPart #odgovorNaKomentar:hover {
+  background-color: whitesmoke;
+  color: tomato;
+}
+
+html body .commentSection .komentariIspis .commentBoxAnswer {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+html body .blockAnswerComment {
+  position: fixed;
+  width: 70%;
+  background-color: #232323;
+  border-radius: 12px;
+  left: 15%;
+  height: 70%;
+  top: 17.5%;
+  z-index: 1003;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid tomato;
+  padding: 3% 0%;
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
+  -webkit-transform: translateY(-4300px);
+          transform: translateY(-4300px);
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+}
+
+@media (max-width: 768px) {
+  html body .blockAnswerComment {
+    width: 85%;
+    left: 7.5%;
+    height: 80%;
+    top: 10%;
+  }
+}
+
+@media (max-width: 576px) {
+  html body .blockAnswerComment {
+    padding: 6% 0%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .blockAnswerComment {
+    padding: 8% 0%;
+  }
+}
+
+@media (max-width: 386px) {
+  html body .blockAnswerComment {
+    padding: 14% 0%;
+  }
+}
+
+html body .blockAnswerComment #closeAnswerPopUp {
+  text-decoration: none;
+  position: absolute;
+  right: 3%;
+  top: 3%;
+}
+
+html body .blockAnswerComment #closeAnswerPopUp i {
+  color: tomato;
+  font-size: 1.7em;
+}
+
+html body .blockAnswerComment h4 {
+  color: tomato;
+  line-height: 37px;
+  letter-spacing: 1.6px;
+  font-size: 1.8em;
+}
+
+@media (max-width: 480px) {
+  html body .blockAnswerComment h4 {
+    font-size: 1.3em;
+  }
+}
+
+html body .blockAnswerComment textarea {
+  resize: none;
+  width: 90%;
+  padding: 1.5%;
+  margin: 8% 0%;
+  color: whitesmoke;
+  background-color: transparent;
+  border: 2px solid whitesmoke;
+  border-radius: 12px;
+}
+
+@media (max-width: 480px) {
+  html body .blockAnswerComment textarea {
+    padding: 3%;
+  }
+}
+
+html body .blockAnswerComment textarea::-webkit-input-placeholder {
+  color: whitesmoke;
+}
+
+html body .blockAnswerComment textarea:-ms-input-placeholder {
+  color: whitesmoke;
+}
+
+html body .blockAnswerComment textarea::-ms-input-placeholder {
+  color: whitesmoke;
+}
+
+html body .blockAnswerComment textarea::placeholder {
+  color: whitesmoke;
+}
+
+html body .blockAnswerComment #commentAnswerErrorPar {
+  color: tomato;
+  font-size: 1.2em;
+  letter-spacing: 1.2px;
+  padding-bottom: 4%;
+  display: none;
+}
+
+html body .blockAnswerComment #answerCommentButton {
+  width: 50%;
+  background-color: tomato;
+  color: whitesmoke;
+  line-height: 3em;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+@media (max-width: 576px) {
+  html body .blockAnswerComment #answerCommentButton {
+    width: 65%;
+  }
+}
+
+@media (max-width: 386px) {
+  html body .blockAnswerComment #answerCommentButton {
+    width: 80%;
+    margin-top: 5%;
+  }
+}
+
+html body .blockAnswerComment #answerCommentButton:hover {
+  color: tomato;
+  background-color: whitesmoke;
+}
+
+html body .blockAnswerComment1 {
+  -webkit-transform: translateY(0px) !important;
+          transform: translateY(0px) !important;
+}
+
+html body .loginRegisterBlock {
+  width: 100%;
+  padding: 22% 0% 5% 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+}
+
+@media (max-width: 480px) {
+  html body .loginRegisterBlock {
+    padding: 28% 0% 10% 0%;
+  }
+}
+
+html body .loginRegisterBlock h2 {
+  background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
+  background-size: 800% 800%;
+  -webkit-animation: gradientTomato 4s ease infinite;
+          animation: gradientTomato 4s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2em;
+  padding-bottom: 3%;
+  letter-spacing: 1.5px;
+}
+
+html body .loginRegisterBlock .loginField {
+  width: 30%;
+  background-color: transparent;
+  border: 2px solid orangered;
+  border-radius: 6px;
+  padding: .5%;
+  color: whitesmoke;
+  margin: 1.3% 0%;
+}
+
+@media (max-width: 992px) {
+  html body .loginRegisterBlock .loginField {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .loginRegisterBlock .loginField {
+    width: 65%;
+    margin: 1.7% 0%;
+    padding: 1%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .loginRegisterBlock .loginField {
+    width: 70%;
+    margin: 3% 0%;
+  }
+}
+
+html body .loginRegisterBlock .loginField::-webkit-input-placeholder {
+  color: whitesmoke;
+}
+
+html body .loginRegisterBlock .loginField:-ms-input-placeholder {
+  color: whitesmoke;
+}
+
+html body .loginRegisterBlock .loginField::-ms-input-placeholder {
+  color: whitesmoke;
+}
+
+html body .loginRegisterBlock .loginField::placeholder {
+  color: whitesmoke;
+}
+
+html body .loginRegisterBlock .loginErrorPar {
+  color: tomato;
+  text-align: center;
+  padding-top: .5%;
+  letter-spacing: 1.2px;
+  font-size: 1.05em;
+  display: none;
+}
+
+@media (max-width: 480px) {
+  html body .loginRegisterBlock .loginErrorPar {
+    font-size: 1em;
+  }
+}
+
+html body .loginRegisterBlock .buttonLoginRegister {
+  background-color: transparent;
+  width: 20%;
+  border-radius: 6px;
+  margin-top: 2%;
+  background-color: tomato;
+  color: whitesmoke;
+  border: 2px solid tomato;
+  line-height: 3em;
+  letter-spacing: 1.2px;
+  -webkit-transition: .6s;
+  transition: .6s;
+  outline: none;
+}
+
+@media (max-width: 992px) {
+  html body .loginRegisterBlock .buttonLoginRegister {
+    width: 30%;
+    margin-top: 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .loginRegisterBlock .buttonLoginRegister {
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .loginRegisterBlock .buttonLoginRegister {
+    width: 50%;
+    margin-top: 5%;
+  }
+}
+
+html body .loginRegisterBlock .buttonLoginRegister:hover {
+  color: tomato;
+  background-color: whitesmoke;
+  border-color: whitesmoke;
 }
 
 html .vert {

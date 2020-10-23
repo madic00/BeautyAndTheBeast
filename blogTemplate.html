@@ -32,6 +32,14 @@
 
 <body>
 
+    <!-- Login/Register -->
+
+    <div class="loginRegister">
+
+        <p><a href="login.html">Uloguj Se</a> / <a href="register.html">Registruj Se</a></p>
+
+    </div>
+
     <!-- Go to top strelica -->
 
     <a href="#!" class='goTop'>
@@ -148,7 +156,73 @@
 
     </div>
 
-    <!-- Footer -->
+    <!-- Komentari -->
+
+    <div class="commentSection">
+
+        <h2>Komentari</h2>
+
+        <div class="postYourComment">
+
+            <textarea placeholder="Vaš komentar..." id="commentForABlog" cols="30" rows="10"></textarea>
+
+            <p id='commentErrorPar'>Niste uneli ništa u polje za komentar.</p>
+
+            <button id='postACommentButton'>Postavi Komentar</button>
+
+        </div>
+
+        <p id='ulogujSeZaKomentar'>Morate se ulogovati da bi ostavili komentar.</p>
+
+        <p id='nemaKomentara'>Nema nijednog komentara na ovom blogu, budi prvi koji će ga postaviti !</p>
+
+        <div class="komentariIspis">
+
+            <div class="commentBox">
+
+                <div class="topCommentPart">
+
+                    <p>Milos Premcevic Hadzi Radic</p>
+
+                    <p>2020-01-01</p>
+
+                </div>
+
+                <div class="middleCommentPart">
+
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque corrupti facilis nostrum eum
+                        necessitatibus aut ipsum quos consequatur, consectetur alias accusantium omnis nisi eligendi
+                        eveniet quaerat vero quis, ducimus soluta.</p>
+
+                </div>
+
+                <div class="botCommentPart">
+
+                    <button id='odgovorNaKomentar' data-komentarIdKor="2">Odgovori Na Komentar</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Blok za odgovor na komentar -->
+
+    <div class="blockAnswerComment">
+
+        <a href="#!" id='closeAnswerPopUp'><i class="fas fa-times"></i></a>
+
+        <h4>Odgovorite korisniku <br /> *ime korinsika*</h4>
+
+        <textarea id="answerCommentArea" placeholder="Vaš odgovor na komentar..." cols="30" rows="10"></textarea>
+
+        <p id='commentAnswerErrorPar'>Niste uneli ništa u polje za komentar.</p>
+
+        <button id='answerCommentButton'>Postavi</button>
+
+    </div>
 
     <!-- Footer -->
 
@@ -221,6 +295,7 @@
 
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/preloader.js"></script>
+    <script src='assets/js/comments.js'></script>
 
 </body>
 

@@ -110,6 +110,40 @@ html{
         overflow: hidden;
         position: relative;
 
+        //  Login/Register div
+
+        .loginRegister{
+
+            position : absolute;
+            right : 1%;
+            top : .2%;
+            font-family : $font;
+            z-index: 1005;
+
+            p{
+
+                color : orange;
+
+                a{
+
+                    color : orange;
+                    font-size: 1.15em;
+                    letter-spacing: 1.2px;
+                    text-decoration: none;
+                    transition: .6s;
+
+                    &:hover{
+
+                        color : tomato;
+
+                    }
+
+                }
+
+            }
+
+        }
+
         // Go to top strelica
 
         .goTop{
@@ -675,6 +709,12 @@ html{
                             @include d6{
 
                                 font-size : .9em;
+
+                            }
+
+                            @include d5{
+
+                                text-align : $c;
 
                             }
 
@@ -1916,6 +1956,626 @@ html{
                         text-align: $c;
     
                     }
+
+                }
+
+            }
+
+        }
+
+        // Komentari za blogove
+
+        .commentSection{
+
+            width : 100%;
+            display: $f;
+            flex-direction: $co;
+            justify-content: $c;
+            align-items: $c;
+            background-color: lighten(#141414, 2%);
+            font-family: $font;
+            padding : 3% 0%;
+            text-align: $c;
+
+            @include d2{
+
+                padding : 6% 0%;
+
+            }
+
+            @include d4{
+
+                padding : 10% 0%;
+
+            }
+
+            h2{
+
+                background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
+                background-size: 800% 800%;
+                animation: gradientTomato 4s ease infinite;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size : 2.3em;
+
+                @include d2{
+
+                    padding-bottom: 5%;;
+
+                }
+
+            }
+
+            .postYourComment{
+
+                width : 70%;
+                background-color: lighten(#141414, 4%);
+                display: $f;
+                flex-direction: $co;
+                justify-content: $c;
+                align-items: $c;
+                margin : 3% 0%;
+                padding : 3.5% 0%;
+                border-radius: 9px;
+
+                @include d2{
+
+                    width : 90%;
+                    padding : 5% 0%;
+
+                }
+
+                @include d5{
+
+                    padding : 8% 0%;
+
+                }
+
+                textarea{
+
+                    resize : none;
+                    width : 70%;
+                    background-color: transparent;
+                    color : whitesmoke;
+                    padding : 1.5%;
+                    border-radius: 12px;
+                    border : 2px solid whitesmoke;
+
+                    @include d3{
+
+                        width : 85%;
+
+                    }
+
+                    @include d4{
+
+                        width : 90%;
+                        padding : 2%;
+
+                    }
+
+                    @include d6{
+
+                        width : 100%;
+
+                    }
+
+                    &::placeholder{
+
+                        color : whitesmoke;
+
+                    }
+
+                }
+
+                #commentErrorPar{
+
+                    color : tomato;
+                    padding-top: 5%;
+                    letter-spacing: 1.1px;
+                    font-size: 1.2em;
+                    display: none;
+
+                }
+
+                #postACommentButton{
+
+                    outline: none;
+                    margin-top : 5%;
+                    width : 30%;
+                    line-height: 3em;
+                    background-color: tomato;
+                    color : whitesmoke;
+                    border: none;
+                    border-radius: 6px;
+                    transition: .6s;
+
+                    @include d2{
+
+                        width : 40%;
+
+                    }
+
+                    @include d4{
+
+                        width : 60%;
+
+                    }
+
+                    @include d5{
+
+                        margin-top : 8%;
+
+                    }
+
+                    &:hover{
+
+                        color : tomato;
+                        background-color: whitesmoke;
+
+                    }
+
+                }
+
+            }
+
+            #nemaKomentara{
+
+                color : #f3b239;
+                letter-spacing: 1.2px;
+                font-size: 1.4em;
+
+                @include d3{
+
+                    padding : 5% 0%;
+
+                }
+
+            }
+
+            #ulogujSeZaKomentar{
+
+                color : #ffce48;
+                font-size : 1.4em;
+                letter-spacing: 1.2px;
+
+                @include d3{
+
+                    padding : 5% 0%;
+
+                }
+
+            }
+
+            .komentariIspis{
+
+                width : 80%;
+                display: $f;
+                flex-direction: $co;
+                align-items: $c;
+                justify-content: $c;
+                margin : 4% 0%;
+
+                @include d1{
+
+                    width : 90%;
+
+                }
+
+                @include d2{
+
+                    width : 100%;
+
+                }
+
+                .commentBox{
+
+                    width : 80%;
+                    background-color: lighten(#141414, 4%);
+                    padding : 3%;
+                    display: $f;
+                    flex-direction: $co;
+                    justify-content: $sa;
+                    align-items: $c;
+                    margin : 2.5% 0%;
+                    border-radius: 12px;
+                    transform: translateX(0px);
+
+                    @include d2{
+
+                        padding : 5% 3%;
+                        width : 85%;
+
+                    }
+
+                    @include d4{
+
+                        width : 95%;
+
+                    }
+
+                    @include d5{
+
+                        padding : 9% 3%;
+
+                    }
+
+                    .topCommentPart{
+
+                        width : 100%;
+                        display: $f;
+                        justify-content: $sb;
+                        align-items: $c;
+
+                        @include d3{
+
+                            flex-direction: $co;
+
+                        }
+
+                        p{
+
+                            margin-bottom: 0px;
+                            color : tomato;
+                            font-size: 1.1em;
+                            letter-spacing: 1.2px;
+
+                        }
+
+                    }
+
+                    .middleCommentPart{
+
+                        margin : 5% 0%;
+                        letter-spacing: 1.2px;
+                        color : whitesmoke;
+                        text-shadow : 1.3px 1.3px #000;
+                        line-height: 36px;
+
+                        @include d4{
+
+                            margin : 7% 0%;
+
+                        }
+
+                    }
+
+                    .botCommentPart{
+
+                        margin-bottom : 3%;
+                        width : 100%;
+
+                        #odgovorNaKomentar{
+
+                            width : 35%;
+                            line-height: 3.2em;
+                            background-color: tomato;
+                            border : none;
+                            border-radius: 6px;
+                            color : whitesmoke;
+                            transition: .6s;
+                            outline: none;
+
+                            @include d2{
+
+                                width : 50%;
+
+                            }
+
+                            @include d5{
+
+                                width : 70%;
+
+                            }
+
+                            &:hover{
+
+                                background-color: whitesmoke;
+                                color : tomato;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                .commentBoxAnswer{
+
+                    transform: translateX(30px);
+
+                }
+
+            }
+
+        }
+
+        // Odgovor na komentar
+
+        .blockAnswerComment{
+
+            position: fixed;
+            width : 70%;
+            background-color: lighten(#141414, 6%);
+            border-radius: 12px;
+            left : 15%;
+            height : 70%;
+            top : 17.5%;
+            z-index: 1003;
+            display: $f;
+            flex-direction: $co;
+            justify-content: $c;
+            align-items: $c;
+            border : 2px solid tomato;
+            padding : 3% 0%;
+            font-family: $font;
+            text-align: $c;
+            transform: translateY(-4300px);
+            transition: 1.2s;
+
+            @include d3{
+
+                width : 85%;
+                left : 7.5%;
+                height : 80%;
+                top : 10%;
+
+            }
+
+            @include d4{
+
+                padding : 6% 0%;
+
+            }
+
+            @include d5{
+
+                padding : 8% 0%;
+
+            }
+
+            @include d6{
+
+                padding : 14% 0%;
+
+            }
+
+
+            #closeAnswerPopUp{
+
+                text-decoration: none;
+                position: absolute;
+                right : 3%;
+                top : 3%;
+
+                i{
+
+                    color : tomato;
+                    font-size: 1.7em;
+
+                }
+
+            }
+
+            h4{
+
+                color : tomato;
+                line-height: 37px;
+                letter-spacing: 1.6px;
+                font-size : 1.8em;
+
+                @include d5{
+
+                    font-size : 1.3em;
+
+                }
+
+            }
+
+            textarea{
+
+                resize : none;
+                width : 90%;
+                padding : 1.5%;
+                margin : 8% 0%;
+                color : whitesmoke;
+                background-color: transparent;
+                border : 2px solid whitesmoke;
+                border-radius: 12px;
+
+                @include d5{
+
+                    padding : 3%;
+
+                }
+
+                &::placeholder{
+
+                    color : whitesmoke;
+
+                }
+
+            }
+
+            #commentAnswerErrorPar{
+
+                color : tomato;
+                font-size : 1.2em;
+                letter-spacing: 1.2px;
+                padding-bottom: 4%;
+                display: none;
+
+            }
+
+            #answerCommentButton{
+
+                width : 50%;
+                background-color: tomato;
+                color : whitesmoke;
+                line-height: 3em;
+                border-radius: 6px;
+                border : none;
+                outline: none;
+                transition: .6s;
+
+                @include d4{
+
+                    width : 65%;
+
+                }
+
+                @include d6{
+
+                    width : 80%;
+                    margin-top: 5%;
+
+                }
+
+                &:hover{
+
+                    color : tomato;
+                    background-color: whitesmoke;
+
+                }
+
+            }
+
+        }
+
+        .blockAnswerComment1{
+
+            transform: translateY(0px) !important;
+
+        }
+
+        // login.html
+
+        .loginRegisterBlock{
+
+            width: 100%;
+            padding: 22% 0% 5% 0%;
+            display: $f;
+            flex-direction: $co;
+            justify-content: $c;
+            align-items: $c;
+            text-align: $c;
+            font-family: $font;
+
+            @include d5{
+
+                padding : 28% 0% 10% 0%;
+
+            }
+
+            h2{
+
+                background: linear-gradient(308deg, #e85d46, #f24124, #f55238, #f3600c, #ca4033, tomato);
+                background-size: 800% 800%;
+                animation: gradientTomato 4s ease infinite;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 2em;
+                padding-bottom: 3%;
+                letter-spacing: 1.5px;
+
+            }
+
+            .loginField{
+
+                width : 30%;
+                background-color: transparent;
+                border : 2px solid orangered;
+                border-radius: 6px;
+                padding : .5%;
+                color : whitesmoke;
+                margin: 1.3% 0%;
+
+                @include d2{
+
+                    width : 40%;
+
+                }
+
+                @include d3{
+
+                    width : 65%;
+                    margin : 1.7% 0%;
+                    padding : 1%;
+
+                }
+
+                @include d5{
+
+                    width : 70%;
+                    margin: 3% 0%;
+
+                }
+
+                &::placeholder{
+
+                    color : whitesmoke;
+
+                }
+
+            }
+
+            .loginErrorPar{
+
+                color : tomato;
+                text-align: $c;
+                padding-top: .5%;
+                letter-spacing: 1.2px;
+                font-size: 1.05em;
+                display: none;
+
+                @include d5{
+
+                    font-size: 1em;
+
+                }
+
+            }
+
+            .buttonLoginRegister{
+
+                background-color: transparent;
+                width : 20%;
+                border-radius: 6px;
+                margin-top: 2%;
+                background-color: tomato;
+                color : whitesmoke;
+                border : 2px solid tomato;
+                line-height: 3em;
+                letter-spacing: 1.2px;
+                transition: .6s;
+                outline: none;
+
+                @include d2{
+
+                    width : 30%;
+                    margin-top: 3%;
+
+                }
+
+                @include d3{
+
+                    width : 40%;
+
+                }
+
+                @include d5{
+
+                    width : 50%;
+                    margin-top: 5%;
+
+                }
+
+                &:hover{
+
+                    color : tomato;
+                    background-color: whitesmoke;
+                    border-color : whitesmoke;
 
                 }
 

@@ -32,14 +32,6 @@
 
 <body>
 
-    <!-- Login/Register -->
-
-    <div class="loginRegister">
-
-        <p><a href="login.html">Uloguj Se</a> / <a href="register.html">Registruj Se</a></p>
-
-    </div>
-
     <!-- Go to top strelica -->
 
     <a href="#!" class='goTop'>
@@ -106,135 +98,46 @@
 
     </div>
 
-    <!-- Blog kartice -->
+    <div class="loginRegisterBlock">
 
-    <div class="blogovi container-fluid">
+        <h2>Registruj Se</h2>
 
-        <a href="blogTemplate.html" class="blogBox">
+        <input type="text" required="required" class='loginField' id="firstNameRegisterField"
+            placeholder="Vaše ime..." />
 
-            <div class="datumPostavljanjaBloga">
+        <p id='firstNameRegisterErrorPar' class="loginErrorPar">Vaše ime mora početi velikim slovom i ne sme imati
+            brojeve. <br /> Mora imati više od 2 slova, i manje od 20 slova. <br /> Ako vaše ime sadrži dve reči,
+            svaka reč počinje velikim slovom. Npr : Ana Marija</p>
 
-                <p>21 Oct 2020</p>
+        <input type="text" placeholder="Vaše prezime..." class="loginField" id="lastNameRegisterField"
+            required="required" />
 
-            </div>
+        <p id="lastNameRegisterErrorPar" class="loginErrorPar">Vaše prezime mora početi velikim slovom i ne sme imati
+            brojeve. <br /> Mora imati više od 2 slova, i manje od 20 slova. <br /> Ako vaše prezime sadrži dve reči,
+            svaka reč počinje velikim slovom. Npr : Hadzi Ristić</p>
 
-            <div class="blogCardInfo">
+        <input type="text" placeholder="Vaš grad..." class="loginField" id="cityRegisterField" required="required" />
 
-                <p id='autorCardText'>Autor : Milos Premčević</p>
+        <p id="cityRegisterErrorPar" class="loginErrorPar">Grad mora početi velikim slovom. <br /> Ako Vaš grad ima više
+            reči u imenu, svaka reč mora početi velikim slovom, npr : Novi Pazar, Novi Sad, ...</p>
 
-                <h3>Ime Bloga</h3>
+        <input type="email" placeholder="Vaš email..." class="loginField" id="emailRegisterField" required="required" />
 
-                <p id='shortIntroCardText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque eos quisquam
-                    beatae veritatis alias tempore sapiente quo adipisci qui</p>
+        <p id="mailRegisterErrorPar" class="loginErrorPar">Email koji ste uneli nije u dobrom formatu, ili već postoji
+            nalog sa ovakim mailom.</p>
 
-            </div>
+        <input type="password" placeholder="Vaša lozinka..." class="loginField" id="passwordRegisterField"
+            required="required" />
 
-        </a>
+        <p id="passwordRegisterErrorPar" class="loginErrorPar">Lozinka mora da sadrži između 8 i 16 karaktera.</p>
 
-        <a href="blogTemplate.html" class="blogBox">
+        <input type="password" placeholder="Vaša lozinka..." class="loginField" id="passwordRepeatRegisterField"
+            required="required" />
 
-            <div class="datumPostavljanjaBloga">
+        <p id="passwordRepeatRegisterErrorPar" class="loginErrorPar">Ponovljena lozinka se ne poklapa sa lozinkom koju
+            ste uneli.</p>
 
-                <p>21 Oct 2020</p>
-
-            </div>
-
-            <div class="blogCardInfo">
-
-                <p id='autorCardText'>Autor : Milos Premčević</p>
-
-                <h3>Ime Bloga</h3>
-
-                <p id='shortIntroCardText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque eos quisquam
-                    beatae veritatis alias tempore sapiente quo adipisci qui</p>
-
-            </div>
-
-        </a>
-
-        <a href="blogTemplate.html" class="blogBox">
-
-            <div class="datumPostavljanjaBloga">
-
-                <p>21 Oct 2020</p>
-
-            </div>
-
-            <div class="blogCardInfo">
-
-                <p id='autorCardText'>Autor : Milos Premčević</p>
-
-                <h3>Ime Bloga</h3>
-
-                <p id='shortIntroCardText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque eos quisquam
-                    beatae veritatis alias tempore sapiente quo adipisci qui</p>
-
-            </div>
-
-        </a>
-
-        <a href="blogTemplate.html" class="blogBox">
-
-            <div class="datumPostavljanjaBloga">
-
-                <p>21 Oct 2020</p>
-
-            </div>
-
-            <div class="blogCardInfo">
-
-                <p id='autorCardText'>Autor : Milos Premčević</p>
-
-                <h3>Ime Bloga</h3>
-
-                <p id='shortIntroCardText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque eos quisquam
-                    beatae veritatis alias tempore sapiente quo adipisci qui</p>
-
-            </div>
-
-        </a>
-
-        <a href="blogTemplate.html" class="blogBox">
-
-            <div class="datumPostavljanjaBloga">
-
-                <p>21 Oct 2020</p>
-
-            </div>
-
-            <div class="blogCardInfo">
-
-                <p id='autorCardText'>Autor : Milos Premčević</p>
-
-                <h3>Ime Bloga</h3>
-
-                <p id='shortIntroCardText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque eos quisquam
-                    beatae veritatis alias tempore sapiente quo adipisci qui</p>
-
-            </div>
-
-        </a>
-
-        <a href="blogTemplate.html" class="blogBox">
-
-            <div class="datumPostavljanjaBloga">
-
-                <p>21 Oct 2020</p>
-
-            </div>
-
-            <div class="blogCardInfo">
-
-                <p id='autorCardText'>Autor : Milos Premčević</p>
-
-                <h3>Ime Bloga</h3>
-
-                <p id='shortIntroCardText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque eos quisquam
-                    beatae veritatis alias tempore sapiente quo adipisci qui</p>
-
-            </div>
-
-        </a>
+        <button id='registerButtonSender' class='buttonLoginRegister'>Registruj Se</button>
 
     </div>
 
@@ -309,6 +212,7 @@
 
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/preloader.js"></script>
+    <script src="assets/js/register.js"></script>
 
 </body>
 

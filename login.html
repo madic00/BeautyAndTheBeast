@@ -32,14 +32,6 @@
 
 <body>
 
-    <!-- Login/Register -->
-
-    <div class="loginRegister">
-
-        <p><a href="login.html">Uloguj Se</a> / <a href="register.html">Registruj Se</a></p>
-
-    </div>
-
     <!-- Go to top strelica -->
 
     <a href="#!" class='goTop'>
@@ -106,135 +98,19 @@
 
     </div>
 
-    <!-- Blog kartice -->
+    <div class="loginRegisterBlock">
 
-    <div class="blogovi container-fluid">
+        <h2>Uloguj Se</h2>
 
-        <a href="blogTemplate.html" class="blogBox">
+        <input type="email" required="required" class='loginField' id="emailLoginField" placeholder="Email..." />
 
-            <div class="datumPostavljanjaBloga">
+        <p id='emailLoginErrorPar' class="loginErrorPar">Email nije u dobrom formatu.</p>
 
-                <p>21 Oct 2020</p>
+        <input type="password" placeholder="Lozinika..." class="loginField" id="passLoginField" required="required" />
 
-            </div>
+        <p id="passLoginErrorPar" class="loginErrorPar">Lozinka mora da sadrži između 8 i 16 karaktera.</p>
 
-            <div class="blogCardInfo">
-
-                <p id='autorCardText'>Autor : Milos Premčević</p>
-
-                <h3>Ime Bloga</h3>
-
-                <p id='shortIntroCardText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque eos quisquam
-                    beatae veritatis alias tempore sapiente quo adipisci qui</p>
-
-            </div>
-
-        </a>
-
-        <a href="blogTemplate.html" class="blogBox">
-
-            <div class="datumPostavljanjaBloga">
-
-                <p>21 Oct 2020</p>
-
-            </div>
-
-            <div class="blogCardInfo">
-
-                <p id='autorCardText'>Autor : Milos Premčević</p>
-
-                <h3>Ime Bloga</h3>
-
-                <p id='shortIntroCardText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque eos quisquam
-                    beatae veritatis alias tempore sapiente quo adipisci qui</p>
-
-            </div>
-
-        </a>
-
-        <a href="blogTemplate.html" class="blogBox">
-
-            <div class="datumPostavljanjaBloga">
-
-                <p>21 Oct 2020</p>
-
-            </div>
-
-            <div class="blogCardInfo">
-
-                <p id='autorCardText'>Autor : Milos Premčević</p>
-
-                <h3>Ime Bloga</h3>
-
-                <p id='shortIntroCardText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque eos quisquam
-                    beatae veritatis alias tempore sapiente quo adipisci qui</p>
-
-            </div>
-
-        </a>
-
-        <a href="blogTemplate.html" class="blogBox">
-
-            <div class="datumPostavljanjaBloga">
-
-                <p>21 Oct 2020</p>
-
-            </div>
-
-            <div class="blogCardInfo">
-
-                <p id='autorCardText'>Autor : Milos Premčević</p>
-
-                <h3>Ime Bloga</h3>
-
-                <p id='shortIntroCardText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque eos quisquam
-                    beatae veritatis alias tempore sapiente quo adipisci qui</p>
-
-            </div>
-
-        </a>
-
-        <a href="blogTemplate.html" class="blogBox">
-
-            <div class="datumPostavljanjaBloga">
-
-                <p>21 Oct 2020</p>
-
-            </div>
-
-            <div class="blogCardInfo">
-
-                <p id='autorCardText'>Autor : Milos Premčević</p>
-
-                <h3>Ime Bloga</h3>
-
-                <p id='shortIntroCardText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque eos quisquam
-                    beatae veritatis alias tempore sapiente quo adipisci qui</p>
-
-            </div>
-
-        </a>
-
-        <a href="blogTemplate.html" class="blogBox">
-
-            <div class="datumPostavljanjaBloga">
-
-                <p>21 Oct 2020</p>
-
-            </div>
-
-            <div class="blogCardInfo">
-
-                <p id='autorCardText'>Autor : Milos Premčević</p>
-
-                <h3>Ime Bloga</h3>
-
-                <p id='shortIntroCardText'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque eos quisquam
-                    beatae veritatis alias tempore sapiente quo adipisci qui</p>
-
-            </div>
-
-        </a>
+        <button id='loginButtonSender' class='buttonLoginRegister'>Uloguj Se</button>
 
     </div>
 
@@ -309,6 +185,7 @@
 
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/preloader.js"></script>
+    <script src="assets/js/login.js"></script>
 
 </body>
 
