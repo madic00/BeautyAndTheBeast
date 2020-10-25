@@ -2449,6 +2449,183 @@ html{
 
         }
 
+        // Transformacije klijenata
+
+        .klijentiMain{
+
+            width : 100%;
+            padding : 0px;
+            height: 100vh;
+            background-image: url('../images/clientsBackground2.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: $c;
+            background-repeat: no-repeat;
+            font-family: $font;
+
+            .faderKlijentiMain{
+
+                width : 100%;
+                height : 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+                display: $f;
+                justify-content: $c;
+                align-items: $c;
+
+                h1{
+
+                    color : whitesmoke;
+                    text-shadow: 2px 2px #000;
+                    font-size : 3em;
+                    letter-spacing: 1.2px;
+                    text-align: $c;
+
+                    @include d4{
+
+                        font-size: 2.5em;
+
+                    }
+
+                    @include d5{
+
+                        font-size: 2em;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        .slikeTransformacija{
+
+            width : 100%;
+            transform: translateY(-17%);
+            padding : .5% 0%;
+
+            @include d3{
+
+                transform: translateY(-14%);
+
+            }
+
+            @include d5{
+
+                transform: translateY(-6%);
+
+            }
+
+            @include d6{
+
+                transform: translateY(-7%); 
+
+            }
+
+            .straneTransformacija{
+
+                width : 100%;
+                display: $f;
+                justify-content: $c;
+                align-items: $c;
+                margin : 5% 0%;
+
+                @include d4{
+
+                    margin : 8% 0%;
+
+                }
+
+                .paginacijaBrojevi{
+
+                    text-decoration: none;
+                    width : 50px;
+                    height : 50px;
+                    background-color: whitesmoke;
+                    color : tomato;
+                    border-radius: 50%;
+                    display: $f;
+                    justify-content: $c;
+                    align-items: $c;
+                    margin: 0% .5%;
+                    font-weight: bold;
+                    transition: .5s;
+
+                    @include d3{
+
+                        margin : 0% 1.5%;
+
+                    }
+
+                    @include d5{
+
+                        margin : 0% 2.5%;
+
+                    }
+
+                    &:hover{
+
+                        color : whitesmoke;
+                        background-color: tomato;
+
+                    }
+
+                }
+
+            }
+
+            .transformationPicsRow{
+
+                width : 90%;
+                margin: 0px auto;
+                display: $f;
+                flex-wrap: $fw;
+                justify-content: $sa;
+                align-items: $c;
+
+                .transformationPictureBox{
+
+                    width : 26%;
+                    display: $f;
+                    justify-content: $c;
+                    align-items: $c;
+                    margin : 3% 0%;
+                    transition: .6s;
+
+                    @include d3{
+
+                        width : 35%;
+
+                    }
+
+                    @include d5{
+
+                        width : 80%;
+                        margin : 5% 0%;
+
+                    }
+
+                    &:hover{
+
+                        box-shadow: 2px 0px 30px 1px tomato;
+
+                    }
+
+                    img{
+
+                        max-width: 100%;
+                        width : 100%;
+                        height: auto;
+                        border-radius: 6px;
+
+                    }
+
+                }
+
+            }
+
+        }
+
         // login.html
 
         .loginRegisterBlock{
@@ -2593,6 +2770,12 @@ html{
 
 }
 
+// Selection
+
+::selection {
+    color: tomato;
+    background: tomato;
+  }
 
 // Animacije
 
