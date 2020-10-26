@@ -2365,6 +2365,196 @@ html body .blockAnswerComment1 {
           transform: translateY(0px) !important;
 }
 
+html body .klijentiMain {
+  width: 100%;
+  padding: 0px;
+  height: 100vh;
+  background-image: url("../images/clientsBackground2.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Work Sans", sans-serif;
+}
+
+html body .klijentiMain .faderKlijentiMain {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body .klijentiMain .faderKlijentiMain h1 {
+  color: whitesmoke;
+  text-shadow: 2px 2px #000;
+  font-size: 3em;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  html body .klijentiMain .faderKlijentiMain h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .klijentiMain .faderKlijentiMain h1 {
+    font-size: 2em;
+  }
+}
+
+html body .slikeTransformacija {
+  width: 100%;
+  -webkit-transform: translateY(-17%);
+          transform: translateY(-17%);
+  padding: .5% 0%;
+}
+
+@media (max-width: 768px) {
+  html body .slikeTransformacija {
+    -webkit-transform: translateY(-14%);
+            transform: translateY(-14%);
+  }
+}
+
+@media (max-width: 480px) {
+  html body .slikeTransformacija {
+    -webkit-transform: translateY(-6%);
+            transform: translateY(-6%);
+  }
+}
+
+@media (max-width: 386px) {
+  html body .slikeTransformacija {
+    -webkit-transform: translateY(-7%);
+            transform: translateY(-7%);
+  }
+}
+
+html body .slikeTransformacija .straneTransformacija {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5% 0%;
+}
+
+@media (max-width: 576px) {
+  html body .slikeTransformacija .straneTransformacija {
+    margin: 8% 0%;
+  }
+}
+
+html body .slikeTransformacija .straneTransformacija .paginacijaBrojevi {
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  background-color: whitesmoke;
+  color: tomato;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0% .5%;
+  font-weight: bold;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@media (max-width: 768px) {
+  html body .slikeTransformacija .straneTransformacija .paginacijaBrojevi {
+    margin: 0% 1.5%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .slikeTransformacija .straneTransformacija .paginacijaBrojevi {
+    margin: 0% 2.5%;
+  }
+}
+
+html body .slikeTransformacija .straneTransformacija .paginacijaBrojevi:hover {
+  color: whitesmoke;
+  background-color: tomato;
+}
+
+html body .slikeTransformacija .transformationPicsRow {
+  width: 90%;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body .slikeTransformacija .transformationPicsRow .transformationPictureBox {
+  width: 26%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3% 0%;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+@media (max-width: 768px) {
+  html body .slikeTransformacija .transformationPicsRow .transformationPictureBox {
+    width: 35%;
+  }
+}
+
+@media (max-width: 480px) {
+  html body .slikeTransformacija .transformationPicsRow .transformationPictureBox {
+    width: 80%;
+    margin: 5% 0%;
+  }
+}
+
+html body .slikeTransformacija .transformationPicsRow .transformationPictureBox:hover {
+  -webkit-box-shadow: 2px 0px 30px 1px tomato;
+          box-shadow: 2px 0px 30px 1px tomato;
+}
+
+html body .slikeTransformacija .transformationPicsRow .transformationPictureBox img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
 html body .loginRegisterBlock {
   width: 100%;
   padding: 22% 0% 5% 0%;
@@ -2508,6 +2698,16 @@ html body .loginRegisterBlock .buttonLoginRegister:hover {
 
 html .vert {
   overflow-y: auto;
+}
+
+::-moz-selection {
+  color: tomato;
+  background: tomato;
+}
+
+::selection {
+  color: tomato;
+  background: tomato;
 }
 
 @-webkit-keyframes pulse {
