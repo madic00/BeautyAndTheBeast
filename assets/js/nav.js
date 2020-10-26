@@ -121,6 +121,46 @@ let logos = Array.from(logosCollection);
 
 for (let el of logos) {
 
-    el.innerHTML = ` <a href="index.html#goTopMain" class='logoImage'><img src="assets/images/milosLogo.png" alt="Logo" class='img-fluid' /></a>`;
+    el.innerHTML = ` <a href="index.php#goTopMain" class='logoImage'><img src="assets/images/milosLogo.png" alt="Logo" class='img-fluid' /></a>`;
+
+}
+
+
+// Helper funkcije
+
+function ajaxGet(url, callback) {
+    $.ajax({
+
+        url: url,
+        success: callback,
+        error: function (xhr, error, status) {
+            console.log(xhr, error, status);
+        }
+
+    });
+}
+
+function ajaxPost(url, data, callback) {
+    $.ajax({
+
+        url: url,
+        type: "POST",
+        dataType: "json",
+        data: data,
+        success: callback,
+        error: function (xhr) {
+            console.log(xhr);
+
+            if (xhr.responseJSON.error) {
+                alert(xhr.responseJSON.error);
+            }
+
+            if (xhr.responseJSON.res) {
+                alert(xhr.responseJSON.res);
+            }
+
+        }
+
+    })
 
 }

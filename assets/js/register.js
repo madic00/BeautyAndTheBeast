@@ -10,6 +10,10 @@ function checkLogin() {
 
     let registerErrors = [];
 
+    // Object za podatke
+
+    let registerData = {};
+
     // Values of login fields
 
     let firstNameRegisterField = document.getElementById('firstNameRegisterField').value;
@@ -40,7 +44,7 @@ function checkLogin() {
 
     // Regexi za login
 
-    let regexFirstLastNameRegister = /^[A-ZŠĐČĆŽ][a-zšđčćž]{3,19}(\s[A-ZŠĐČĆŽ][a-zšđčćž]{3,19})?$/;
+    let regexFirstLastNameRegister = /^[A-ZŠĐČĆŽ][a-zšđčćž]{2,19}(\s[A-ZŠĐČĆŽ][a-zšđčćž]{3,19})?$/;
 
     let regexCityRegister = /^[A-ZŠĐČĆŽ][a-zšđčćž]+(\s[A-ZŠĐČĆŽ][a-zšđčćž]+){0,2}$/;
 
@@ -50,11 +54,13 @@ function checkLogin() {
 
 
 
-    function checkRegsiterRegex(poljeLogin, regexLogin, errorLogin) {
+    function checkRegisterRegex(poljeLogin, regexLogin, errorLogin, propName) {
 
         if (regexLogin.test(poljeLogin)) {
 
             errorLogin.style.display = 'none';
+
+            registerData[propName] = poljeLogin;
 
         }
 
@@ -68,15 +74,15 @@ function checkLogin() {
 
     };
 
-    checkRegsiterRegex(firstNameRegisterField, regexFirstLastNameRegister, firstNameRegisterErrorPar);
+    checkRegisterRegex(firstNameRegisterField, regexFirstLastNameRegister, firstNameRegisterErrorPar, "firstName");
 
-    checkRegsiterRegex(lastNameRegisterField, regexFirstLastNameRegister, lastNameRegisterErrorPar);
+    checkRegisterRegex(lastNameRegisterField, regexFirstLastNameRegister, lastNameRegisterErrorPar, "lastName");
 
-    checkRegsiterRegex(cityRegisterField, regexCityRegister, cityRegisterErrorPar);
+    checkRegisterRegex(cityRegisterField, regexCityRegister, cityRegisterErrorPar, "city");
 
-    checkRegsiterRegex(mailRegisterField, regexMailRegister, mailRegisterErrorPar);
+    checkRegisterRegex(mailRegisterField, regexMailRegister, mailRegisterErrorPar, "email");
 
-    checkRegsiterRegex(passRegisterField, regexPassRegister, passRegisterErrorPar);
+    checkRegisterRegex(passRegisterField, regexPassRegister, passRegisterErrorPar, "pass");
 
     if (passRepeatRegisterField != passRegisterField) {
 
@@ -96,6 +102,34 @@ function checkLogin() {
 
         // Ajax za Madica
 
+        registerData.btnRegister = true;
+
+        console.log(registerData);
+
+        ajaxPost("api/user/register.php", registerData, data => {
+            alert(data.responseText);
+
+            if (data.status) {
+
+                window.location.href = "index.php?page=login";
+
+            } else {
+
+                let out = "";
+
+                for (let err of data.errors) {
+                    out += `<p>${err}</p>`;
+                }
+
+                $("#registerErrorServer").show();
+                $("#registerErrorServer").html(out);
+
+            }
+        })
+
+    } else {
+
+        console.log(registerErrors);
     }
 
 }

@@ -2196,6 +2196,10 @@ html body .commentSection .komentariIspis .commentBox .botCommentPart #odgovorNa
   color: tomato;
 }
 
+html body .commentSection .komentariIspis .childCommentBox {
+  margin-left: 80px;
+}
+
 html body .commentSection .komentariIspis .commentBoxAnswer {
   -webkit-transform: translateX(30px);
           transform: translateX(30px);
